@@ -1,0 +1,5 @@
+Objetivo General
+
+1 Liberar un sistema web de base de datos médicas accesible desde internet para el segundo trimestre del 2023.
+
+(desarrolla los sub objetivos en el acta)
