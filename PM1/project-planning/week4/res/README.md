@@ -108,10 +108,68 @@ En caso de algún error al enviar el correo, se mostrará la siguiente pantalla:
 
 Si el usaurio da click en *Ok*, será redireccionado a la página principal.
 
+#### 2.1.2 Métricas
+
+- Definición de Fallo
+
+> Un fallo o defecto es inyectado en un software cuando un error ocurre en el proceso de desarrollo del sistema.
+
+- Métricas de Calidad del Producto Final
+
+    1. **Instrinsic Product Quality (IPQ) Metrics**: 
+    
+        1. **Defect Density Rate (DDR)**: es el número de bugs<sup>2</sup> (Defectos Funcionales) que se registran al usar todas y cada una de las funcionalidades del sistema dividido entre el tamaño del sistema.
+
+            $
+            DDR = \frac{\hbox{número de bugs}}{LoC^3}
+            $
+
+            Esta métrica deberá calcularse cada 5 bugs reportados, hasta que el software lleve 2 años de liberación.
+
+        2. **Mean Time of Failure (MTTF)**: es la medida promedio de cuánto tiempo le toma al sistema fallar de forma fatal<sup>4</sup>.
+
+        Por cada *bug* encontrado, se deberá calcular:
+
+        3. **Probability of Failure**: la probabilidad de fallo asociado a un bug presente *i*, también llamado *bug size*.
+
+            $
+            PoF_i = \frac{\hbox{caminos con bug en una funcionalidad}}{\hbox{total de caminos de la funcionalidad}}
+            $
+
+    2. **Lines of Code Defect Rates**: 
+
+        1. El LoC del sistema debe calcularse para el tamaño total del sistema, y cada que se calcule deberá reportarse como **LoC viejo (SSI)** y **LoC nuevo (CSI)**, refiriéndose al tamaño del sistema anterior y al tamaño después de la actualización más reciente: SSI por Shipped Source Instructions y CSI por Changed Source Instructions, ya que las LoC se miden por Source Instructions (instrucciones de código fuente).
+
+        Reportar en cada *release*:
+
+        - **SSI** y **CSI**.
+
+        - **Defect Rate per Thousand SSI (KSSI)**:
+
+        $
+        KSSI = \frac{bugs}{\hbox{Number of Thousand SSI}}
+        $
+
+        - **Defect Rate per Thousand CSI (KSSI)**:
+
+        $
+        KCSI = \frac{bugs}{\hbox{Number of Thousand CSI}}
+        $
+
+        Y así calcular el **Número total de Defectos (DDR)**:
+
+        $
+        DDR = KCSI \times KLoC
+        $
+
+### 2.2 Funcionamiento Interno
+
 ----
 
 modal<sup>1</sup>: es un componente de captura de datos muy utilizado en web, que básicamente es un cuadro sobrepuesto a la pantalla que lo desplegó, que oscurece la misma y sobrepone este cuadro con campos para llenar.
 
-#### 2.1.2 Métricas
+bugs<sup>2</sup>: en software, se le llama *bug* a un error o falla en la lógica del programador, que puede o no resultar en la interrupción del programa durante su ejecución.
 
-### 2.2 Funcionamiento Externo
+LoC<sup>3</sup>: Lines of Code, es la medida estándar de un software.
+
+Fallar de forma fatal<sup>4</sup>: en software, un fallo fatal es que el sistema se interrumpa de forma abrupta y definitiva.
