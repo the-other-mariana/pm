@@ -126,7 +126,7 @@ Si el usaurio da click en *Ok*, será redireccionado a la página principal.
 
             Esta métrica deberá calcularse cada 5 bugs reportados, hasta que el software lleve 2 años de liberación.
 
-        2. **Mean Time of Failure (MTTF)**: es la medida promedio de cuánto tiempo le toma al sistema fallar de forma fatal<sup>4</sup>.
+        2. **Mean Time of Failure (MTTF)**: es la medida promedio de cuánto tiempo le toma al sistema fallar de forma fatal<sup>4</sup>. Se puede dividir este tiempo entre el tiempo total estimado sin fallas para obtener un porcentaje.
 
         Por cada *bug* encontrado, se deberá calcular:
 
@@ -135,6 +135,14 @@ Si el usaurio da click en *Ok*, será redireccionado a la página principal.
             $$
             PoF_i = \frac{\hbox{Caminos con bug en una funcionalidad}}{\hbox{Total de caminos de la funcionalidad}}
             $$
+
+        Especificaciones:
+
+        | Métrica | Fitness Function<sup>6</sup> | Significado |
+        | ---- | ---- | ---- |
+        | DDR | DDR = 1 por cada 1000 LoC | Ideal o normal en software no trivial. |
+        | MTTR | MTTR = 100% | El software debe evitar a toda costa fallos fatales. Un fallo fatal debe ser arreglado antes de la liberación | 
+        | PoF | PoF > 50% | Bug severo, prioridad en seguimiento. |
 
     2. **Lines of Code Defect Rates**: 
 
@@ -162,6 +170,13 @@ Si el usaurio da click en *Ok*, será redireccionado a la página principal.
         DDR = KCSI \times KLoC
         $$
 
+        Especificaciones:
+
+        | Métrica | Fitness Function<sup>6</sup> | Significado |
+        | ---- | ---- | ---- |
+        | KSSI | KSSI = 1 | Ideal o normal. Prioridad depende del *bug size*. |
+        | KCSI | KCSI = 1 | Ideal o normal. Prioridad depende del *bug size*. |
+
     3. **Customer Problems Metrics**:
 
         Desde el punto de vista del usuario, todos los problemas con los que se encuentran mientras usan el sistema, no sólo los **defectos válidos** (bugs), son problemas con el software. Incluso los problemas de usabilidad, documentación imprecisa, etc. 
@@ -174,6 +189,12 @@ Si el usaurio da click en *Ok*, será redireccionado a la página principal.
         PUM = \frac{\hbox{Customer problems}}{\hbox{Meses de uso}}
         $$
 
+        Especificaciones:
+
+        | Métrica | Fitness Function<sup>6</sup> | Significado |
+        | ---- | ---- | ---- |
+        | PUM | 
+
     4. **Defect Density During Testing**
 
         Las métricas de **DDR** aplicadas durante el proceso de desarrollo están correlacionadas positivamente con el DDR del release futuro.
@@ -185,6 +206,8 @@ Si el usaurio da click en *Ok*, será redireccionado a la página principal.
         $$
 
         Si el **DDR** durante el testing de desarrollo **es el mismo o menor que aquel DDR del release anterior**, entonces deberemos preguntarnos: ¿el testing para el release actual está deteriorando el producto futuro?
+
+        Especificaciones:
 
         | Métrica | Fitness Function<sup>6</sup> | Significado |
         | ---- | ---- | ---- |
@@ -210,19 +233,19 @@ Si el usaurio da click en *Ok*, será redireccionado a la página principal.
         BMI = \frac{\hbox{Número de problemas cerrados en 1 semana}}{\hbox{Número de nuevos problemas detectados en 1 semana}} \times 100\%
         $$
 
+        - **Fix Response Time (FRT)**: es el tiempo límite que debe pasar para que la solución de un error deba estar disponible al público, en función de la métrica **PoF** para cada error *i*. El **Fix Response Time Metric** es el promedio de todos estos tiempos límite. 
+
+        Especificaciones:
+
         | Métrica | Fitness Function | Significado |
         | ---- | ---- | ---- |
+        | FBI | FBI < Product Backlog Tasks | Los Fixes por hacer en la siguiente semana no deben sobrepasar el número de tareas por hacer en ese tiempo. |
         | BMI | BMI > 100 | El backlog está siendo reducido y se llegará a cero. |
         | BMI | BMI < 100 | El backlog está aumentando y el mantenimiento sólo incrementará.
         | BMI | BMI = 100 | El backlog de mantenimiento siempre es constante. Cada nueva semana hay que arreglar el mismo número de problemas. |
-
-        Realizr una serie de tiempo del BMI (gráfico de control).
-
-        - **Fix Response Time**: es el tiempo límite que debe pasar para que la solución de un error deba estar disponible al público, en función de la métrica **PoF** para cada error *i*. El **Fix Response Time Metric** es el promedio de todos estos tiempos límite. 
-
-        | Métrica | Fitness Function | Significado |
-        | ---- | ---- | ---- |
         | FRT | FRT pequeña (1 día) | Pequeños FRT conduce a satisfacción del cliente. |
+
+        Realizar una serie de tiempo del BMI (gráfico de control).
 
 ### 2.2 Funcionamiento Interno
 
