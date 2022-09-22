@@ -120,9 +120,9 @@ Si el usaurio da click en *Ok*, será redireccionado a la página principal.
     
         1. **Defect Density Rate (DDR)**: es el número de bugs<sup>2</sup> (Defectos Funcionales) que se registran al usar todas y cada una de las funcionalidades del sistema dividido entre el tamaño del sistema.
 
-            $
+            $$
             DDR = \frac{\hbox{número de bugs}}{LoC^3}
-            $
+            $$
 
             Esta métrica deberá calcularse cada 5 bugs reportados, hasta que el software lleve 2 años de liberación.
 
@@ -132,9 +132,9 @@ Si el usaurio da click en *Ok*, será redireccionado a la página principal.
 
         3. **Probability of Failure**: la probabilidad de fallo asociado a un bug presente *i*, también llamado *bug size*.
 
-            $
+            $$
             PoF_i = \frac{\hbox{caminos con bug en una funcionalidad}}{\hbox{total de caminos de la funcionalidad}}
-            $
+            $$
 
     2. **Lines of Code Defect Rates**: 
 
@@ -146,21 +146,21 @@ Si el usaurio da click en *Ok*, será redireccionado a la página principal.
 
         - **Defect Rate per Thousand SSI (KSSI)**:
 
-        $
+        $$
         KSSI = \frac{bugs}{\hbox{Number of Thousand SSI}}
-        $
+        $$
 
         - **Defect Rate per Thousand CSI (KSSI)**:
 
-        $
+        $$
         KCSI = \frac{bugs}{\hbox{Number of Thousand CSI}}
-        $
+        $$
 
         Y así calcular el **Número total de Defectos (DDR)**:
 
-        $
+        $$
         DDR = KCSI \times KLoC
-        $
+        $$
 
 ### 2.2 Funcionamiento Interno
 
