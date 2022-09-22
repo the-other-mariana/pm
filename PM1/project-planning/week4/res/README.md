@@ -18,11 +18,26 @@ La página cuenta con la vista usual de un login.
 
 ![img](look/login.png)
 
+Unit Test(s)
+
+| Caso | Criterio de aceptación |
+| --- | --- |
+| Constraseña y Usuario ingresados existen en la base de datos | Entra a la pestaña de Perfil |
+| Usuario existente, pero contraseña ingresada erróneamente | Mensaje de error. El sistema se queda en Login |
+
 2. Registro
 
 Cuando el usuario entra por primera vez y da click en el botón *Register* de la pantalla principal, se mostrará una pantalla para crear una cuenta, donde los datos obligatorios están encuadrados de rojo: Username y Password. Si al dar click en *Register* y el usuario que desea crear ya existe, se mostrará un letrero de error en rojo debajo del cuadro principal de registro.
 
 ![img](look/unique-users.png)
+
+Unit Test(s)
+
+| Caso | Criterio de aceptación |
+| --- | --- |
+| Usuario y contraseña son ingresados solamente, el usuario aún no existe en la base de datos | El sistema carga la pantalla de Login y guarda el usuario registrado |
+| Usuario y contraseña son ingresados solamente, usuario existe ya en la base datos | Mensaje de error: el usuario ya existe. Carga de nuevo página de registro |
+| Sólo se ingresa el usuario | Mensaje de error: para crear un usuario se necesita mínimo el Usuario y Contraseña. |
 
 2. Perfil
 
@@ -30,11 +45,23 @@ Después de que un usuario **exitente** se loggea, se observa la pantalla con el
 
 ![img](look/profile-tab.png)
 
+Unit Test(s)
+
+| Caso | Criterio de aceptación |
+| --- | --- |
+| Usuario y contraseña son ingresados correctamente en Login | La pestaña Profile muestra los datos principales del usuario correspondiente. |
+
 3. Templates
 
 La página permite que el usuario personalice los formularios que usa frecuentemente con sus pacientes. Este proceso comienza en la pestaña de Templates.
 
 ![img](look/template-tab.png)
+
+Unit Test(s)
+
+| Caso | Criterio de aceptación |
+| --- | --- |
+| Una vez loggeado, se da click en la pestaña Templates | La pestaña Temlates muestra todos los Templates guardados del usuario correspondiente. |
 
 - Crear un Template
 
@@ -62,6 +89,17 @@ La página permite que el usuario personalice los formularios que usa frecuentem
 
     ![img](look/template-added-02.png)
 
+    Unit Test(s)
+
+    | Caso | Criterio de aceptación |
+    | --- | --- |
+    | Se da click en *Add Template* | Se despliega el modal de New Template sin ningún campo |
+    | Se da click en *Add Field* por primera vez | Se acumula un campo entre el botón y el header |
+    | Se da click en *Add Field* después de la 1a vez | Se acumulan N campos según N número de clicks en *Add Field* |
+    | Se da click en *Dismiss* | El Template no se guarda en la base de datos. |
+    | Se da click en *Save* con 0 campos | El Template se guarda vacío en la base de datos. |
+    | Se da click en *Save* con N campos | El Template se guarda en la base datos del usuario correspondiente. |
+
 - Usar el Template
 
     Cuando el usuario se mueva a la pestaña de Pacientes y de clic en *Add Patient*, un modal<sup>1</sup> aparecerá sobre la pantalla con los campos a llenar:
@@ -86,11 +124,25 @@ La página permite que el usuario personalice los formularios que usa frecuentem
 
     ![img](look/delete-template.png)
 
+    Unit Test(s)
+
+    | Caso | Criterio de aceptación |
+    | --- | --- |
+    | Se da click en *Delete* de algún Template | Se vuelve a cargar la pestaña de Templates, donde el Template borrado ya no está en la lista. |
+
 - Editar un Documento de algún Paciente
 
     Si el usuario se mueve a la vista de algún paciente, podrá elegir editar algún documento de ese paciente, haciendo click en la ficha que desee, en el botón gris *Edit* en la esquina inferior derecha. Aparecerá un modal<sup>1</sup> sobre la vista actual con los datos previos de ese documento listos para editarse.
 
     ![img](look/edit-modal-docs-03.png)
+
+    Unit Test(s)
+
+    | Caso | Criterio de aceptación |
+    | --- | --- |
+    | Se da click en *Edit* de algún Documento de algún paciente y se da click en *Save* | Se vuelve a cargar la pestaña del paciente, donde el Documento editado muestra los cambios hechos. Se actualiza la base de datos. |
+    | Se da click en *Edit* de algún Documento de algún paciente y se da click en *Dismiss* | Se vuelve a cargar la pestaña del paciente, donde el Documento editado no muestra cambio alguno. |
+    | Se da click en *Delete* de algún Documento de algún paciente | Se vuelve a cargar la pestaña del paciente, pero sin el Documento borrado en la lista. Se actualiza la base de datos. |  
 
 4. Recuperar Constraseña
 
@@ -107,6 +159,14 @@ En caso de algún error al enviar el correo, se mostrará la siguiente pantalla:
 ![img](look/error-email.png)
 
 Si el usaurio da click en *Ok*, será redireccionado a la página principal.
+
+Unit Test(s)
+
+| Caso | Criterio de aceptación |
+| --- | --- |
+| Al cargar el Login, se da click en *Forgot Your Password?* | El sistema muestra la pantalla de Recuperar Constraseña |
+| Después del Logout, se da click en *Forgot Your Password?* | El sistema muestra la pantalla de Recuperar Constraseña |
+| Ingresar un email sin @ y dar click en *Send* | Mensaje de error: Something went wrong. Please make sure the email is correct. |
 
 #### 2.1.2 Métricas
 
@@ -367,6 +427,26 @@ Especificaciones:
 | Complejidad Ciclomática (CC) | CC > 24 | Cantidad total de caminos de ejecución posibles en un método. Es el número de casos de prueba mínimos. Mayor a 24 significa riesgo a errores. |
 | Profundidad de identación (PI) | PI > 4 | Número maximo de identación en un método. Más de 4 significa complejidad innecesaria. |
 
+### 2.3 Pruebas
+
+1. Cada una de las Métricas descritas en la [sección 2.2](https://github.com/the-other-mariana/pm/tree/master/PM1/project-planning/week4/res#22-funcionamiento-interno) y [subsección 2.1.2](https://github.com/the-other-mariana/pm/tree/master/PM1/project-planning/week4/res#212-m%C3%A9tricas) debe de ser probada o calculada con la siguiente periodicidad:
+
+| Métrica | Clasificación | Periodicidad | Etapa |
+| --- | --- | --- | --- |
+| DDR | Externo | Cada 5 bugs reportados, hasta que el software cumpla 2 años de liberación. | Liberación |
+| MTTR | Externo | Cada prueba con el usuario final | Desarrollo |
+| PoF | Externo | Cada que el DDR sea calculado, calcular el *bug size*. | Liberación |
+| KSSI | Externo | Cada release al mercado. | Liberación |
+| KCSI | Externo | Cada release al mercado a partir del segundo release. | Liberación | 
+| PUM | Externo | Cada mes ya que sea liberado al mercado. | Liberación |
+| DDR en Testing | Externo | Cada prueba con el usuario. | Desarrollo | 
+| FBI, BMI, FRT | Externo | Cada semana durante el desarrollo. | Desarrollo |
+| MMI, MaxCG, PC | Interno | Cada nuevo release, ya sea al público o cada sprint. | Ambas |
+| LoC por archivo, I, CC, PI | Interno | Cada sprint. | Desarrollo |
+
+2. Cada uno de los puntos descritos en la [sección 2.1.1](https://github.com/the-other-mariana/pm/tree/master/PM1/project-planning/week4/res#211-aspecto) debe ser probado con una serie de *Unit Tests* descritos en la parte inferior. Un *Unit Test* prueba cada módulo de código para comprobar que *funcione* correctamente como el usuario final espera. Son pruebas programadas o automatizadas.
+
+### Glosario
 ----
 
 modal<sup>1</sup>: es un componente de captura de datos muy utilizado en web, que básicamente es un cuadro sobrepuesto a la pantalla que lo desplegó, que oscurece la misma y sobrepone este cuadro con campos para llenar.
