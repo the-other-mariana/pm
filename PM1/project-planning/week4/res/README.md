@@ -193,7 +193,7 @@ Si el usaurio da click en *Ok*, será redireccionado a la página principal.
 
         | Métrica | Fitness Function<sup>6</sup> | Significado |
         | ---- | ---- | ---- |
-        | PUM | 
+        | PUM | - | Considerar aquel PUM que no haga que el FBI salte a valores anormales. |
 
     4. **Defect Density During Testing**
 
@@ -311,7 +311,7 @@ El MMI se obtiene determinando un número entre 0 y 10 para cada criterio. Los n
 | 3.3 | >=23% | <23% | <18% | <13,5% | <10,5% | <8% | <6% |
 | 3.4 | >=3,6% | <3,6% | <2,6% | <1,9% | <1,4% | <1% | <0,7 |
 
-Después de obtener el MMI, se verifica su signifcado:
+Después de obtener el MMI, se verifica su significado:
 
 | Métrica | Fitness Function | Significado |
 | ---- | ---- | ---- |
@@ -349,12 +349,16 @@ $$
 
 Nos indica que cada que toquemos un archivo fuente / módulo $x_i$, el $PC$% de todos los componentes del sistema están siendo afectados en promedio.
 
+Especificaciones:
+
 | Métrica | Fitness Function | Significado |
 | ---- | ---- | ---- |
 | PC | PC >= 10% | Si N >= 5000, el PC es riesgoso. Seguimiento. |
 | PC | 0 <= PC <= 100% | Si N < 500, aunque PC sea alto, no es problema. |
 
 - **Size Metrics**:
+
+Especificaciones:
 
 | Métrica | Fitness Function | Significado |
 | ---- | ---- | ---- |
