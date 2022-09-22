@@ -226,6 +226,120 @@ Si el usaurio da click en *Ok*, será redireccionado a la página principal.
 
 ### 2.2 Funcionamiento Interno
 
+Se muestra a continuación una serie de métricas de arquitectura de software, las cuales son medidas estandarizadas que permitirán saber si un software es mantenible, escalable y *sano*, ya que si bien un software hace lo que debe de hacer, puede ser imposible de mantener y quedar obsoleto en poco tiempo.
+
+#### 2.2.1 Métricas
+
+Definición de Deuda Técnica:
+
+> La deuda técnica (Technical Debt) es todo aquel trabajo que se está acumulando para el futuro.
+
+- **Modularity Maturity Index (MMI)**: sirve para comparar la deuda técnica entre varias versiones de un software. La *Modularidad* es un principio introducido en los 70s donde se establece que un módulo en software debe contener sólo una función de diseño, es decir, un módulo debe ser un pedazo de código que se dedica a una sola tarea. Para calcular el MMI se evalúan los siguientes criterios:
+
+1. Domain and Technical Modularization (25%)
+
+    1. % de código fuente en Domain Modules (Módulos de dominio) con relación a LoC total.
+
+    2. % de código fuente en Technical Layers (Capas Técnicas) con relación a LoC total.
+
+    3. Relación de tamaño entre los módulos de dominio
+
+        $$
+        \frac{(\frac{\hbox{Domain LoC max}}{\hbox{Domain LoC min}})}{\hbox{Número de Domain Modules}}
+        $$
+
+    4. Relación de tamaño entre las capas técnicas
+
+        $$
+            \frac{(\frac{\hbox{Technical Layer LoC max}}{\hbox{Technical Layer LoC min}})}{\hbox{Número de Technical Layers}}
+        $$
+
+    5. Módulos de dominio, capas técnicas, packages y classes tienen una responsabilidad clara.
+
+2. Interfaces Internas (10%)
+
+    1. Modulos de dominio o técnicos tienen interfaces (% de violaciones).
+
+    2. Mappeo de las interfaces internas usando packages / namespaces o projectos.
+
+3. Proporciones (10%)
+
+    1. % de código fuente en clases amplias.
+
+    2. % de código fuente en métodos amplios.
+
+    3. % de clases en packages largos.
+
+    4. % de los métodos del sistema con gran Complejidad Ciclomática (Cyclomatic Complexity)
+
+El MMI se obtiene determinando un número entre 0 y 10 para cada criterio. Los números obtenidos se suman por sección y se dividen entre el número de criterios sumados. El MMI se registra con el porcentaje del principio para que un solo número entre 0 y 10 sea determinado. Califique de la siguiente manera:
+
+| Sección | 0 | 1 | 2 | 3 | 4 | 5 | 6 |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 1.1 | <=54% | >54% | >58% | >62% | >66% | >70% | >74 |
+| 1.2 | <=75% | >75% | >77,5% | >80% | >82,5% | >85% | >87 |
+| 1.3 | >=7,5 | <7,5 | <5 | <3,5 | <2,5 | <2 | <1,5 |
+| 1.4 | >=16,5 | <16,5 | <11 | <7,5 | <5 | <3,5 | <2,5 |
+| 1.5 | No | partially | Yes, all |
+| 2.1 | >=6,5% | <6,5% | <4% | <2,5% | <1,5% | <1% | <0,6 |
+| 2.2 | No | partially | Yes |
+| 3.1 | >=23% | <23% | <18% | <13,5% | <10,5% | <8% | <6% |
+| 3.2 | >=23% | <23% | <18% | <13,5% | <10,5% | <8% | <6% |
+| 3.3 | >=23% | <23% | <18% | <13,5% | <10,5% | <8% | <6% |
+| 3.4 | >=3,6% | <3,6% | <2,6% | <1,9% | <1,4% | <1% | <0,7 |
+
+Después de obtener el MMI, se verifica su signifcado:
+
+| Métrica | Fitness Function | Significado |
+| ---- | ---- | ---- |
+| MMI | 8 <= MMI <= 10 | Baja deuda técnica. Ideal. |
+| MMI | 4 <= MMI < 8 | Moderada deuda técnica. |
+| MMI | 0 <= MMI < 4 | Alta deuda técnica. Su mantenimiento se hará con gran esfuerzo. Debe considerarse hacer un *upgrade* o reemplazar la totalidad del sistema. |
+
+- **Circular Dependency**: también llamada **cyclic dependecy**, es un antipatrón: indica las dependencias que tiene un archivo de código fuente con los demás archivos. Si un desarrollador quiere usar un archivo, todos aquellos archivos de los que depende también serán usados, por lo que se incrementa el desperdicio. Un grupo ciclado de archivos fuente se vería así:
+
+![img](arch/cycle.PNG)
+
+- **Número de elementos en el grupo ciclado más grande (MaxCG)**:
+
+| Métrica | Fitness Function | Significado |
+| ---- | ---- | ---- |
+| MaxCG | MaxCG = 0 | No existen ciclos de dpendencias. Ideal. |
+| MaxCG | 0 < MaxCG <= 5 | Ciclos de dependencias normales o aceptables. |
+| MaxCG | MaxCG > 5 | El test de Cycle Groups debe fallar. Dar seguimiento. |
+
+- **Average Component Dependency (ACD)**: esta métrica dice, si seleccionamos un archivo fuente / módulo, sobre cuántos elementos depende, incluyéndose a sí mismo. Si $x_i$ es el número de dependencias de un componente (archivo fuente / módulo) y $N$ es el número de componentes del sistema,
+
+$$
+ACD = \frac{\sum_{i = 1}^{i = N}{x_i} }{N}
+$$
+
+Por ejemplo, de tener un sistema con 6 componentes (archivos fuente / módulos), y calcular el ACD para la caja con el número 4, el resultado sería 6.
+
+![img](arch/ACD.PNG)
+
+- **Propagation Cost Metric (PC)**: 
+
+$$
+PC = \frac{ACD}{N} \times 100\%
+$$
+
+Nos indica que cada que toquemos un archivo fuente / módulo $x_i$, el $PC$% de todos los componentes del sistema están siendo afectados en promedio.
+
+| Métrica | Fitness Function | Significado |
+| ---- | ---- | ---- |
+| PC | PC >= 10% | Si N >= 5000, el PC es riesgoso. Seguimiento. |
+| PC | 0 <= PC <= 100% | Si N < 500, aunque PC sea alto, no es problema. |
+
+- **Size Metrics**:
+
+| Métrica | Fitness Function | Significado |
+| ---- | ---- | ---- |
+| LoC por archivo | 1 <= LoC <= 800 | Tamaño recomendado. |
+| Número de isntrucciones (I) |  1 <= I <= 100 | Tamaño recomendable por método o función. |
+| Complejidad Ciclomática (CC) | CC > 24 | Cantidad total de caminos de ejecución posibles en un método. Es el número de casos de prueba mínimos. Mayor a 24 significa riesgo a errores. |
+| Profundidad de identación (PI) | PI > 4 | Número maximo de identación en un método. Más de 4 significa complejidad innecesaria. |
+
 ----
 
 modal<sup>1</sup>: es un componente de captura de datos muy utilizado en web, que básicamente es un cuadro sobrepuesto a la pantalla que lo desplegó, que oscurece la misma y sobrepone este cuadro con campos para llenar.
@@ -238,4 +352,4 @@ Fallar de forma fatal<sup>4</sup>: en software, un fallo fatal es que el sistema
 
 push<sup>5</sup>: en software, un *push* es la acción de un desarrollador cuando añade el código que desarrolló al código fuente que es visible para todos los demás desarrolladores. Se recomienda hacer un *push* por cada funcionalidad completada.
 
-Fitness Function<sup>6</sup>
+Fitness Function<sup>6</sup>: es una función que define los valores actuales de una métrica o los valores ideales.
