@@ -186,7 +186,7 @@ Si el usaurio da click en *Ok*, será redireccionado a la página principal.
 
         Si el **DDR** durante el testing de desarrollo **es el mismo o menor que aquel DDR del release anterior**, entonces deberemos preguntarnos: ¿el testing para el release actual está deteriorando el producto futuro?
 
-        | Métrica | Fitness Function<sup>6</sup> | Acción |
+        | Métrica | Fitness Function<sup>6</sup> | Significado |
         | ---- | ---- | ---- |
         | DDR | DDR actual <= DDR anterior | Seguimiento. Registrar el patrón de defectos que llegan (nuevos) al código fuente para identificar los tiempos entre fallas, de forma que los patrones indiquen la calidad por área desarollada.  |
 
@@ -194,6 +194,35 @@ Si el usaurio da click en *Ok*, será redireccionado a la página principal.
 
     5. **Metrics for Maintenance**
 
+        Mantenimiento de software:
+
+        > Cuando el desarrollo de un producto de software está completo y éste es liberado al mercado, entra a la fase de mantenimiento en su ciclo de vida.
+
+        Reportar:
+
+        - **Llegada de defectos en intervalo de tiempo**: registrar los nuevos defectos funcionales y no funcionales (customer problems) en una serie de tiempo.
+
+        - **Fix Backlog Index (FBI)**: el *Fix Backlog* es el número de bugs que se deben de arreglar como parte del mantenimiento. El *Fix Backlog Index* es el número de problemas reportados que **quedan al final de 1 semana**. Hacer una serie de tiempo.
+
+        - **Backlog Management Index (BMI)**: sirve para manejar el backlog de problemas aún abiertos y no resueltos.
+
+        $$
+        BMI = \frac{\hbox{Número de problemas cerrados en 1 semana}}{\hbox{Número de nuevos problemas detectados en 1 semana}} \times 100\%
+        $$
+
+        | Métrica | Fitness Function | Significado |
+        | ---- | ---- | ---- |
+        | BMI | BMI > 100 | El backlog está siendo reducido y se llegará a cero. |
+        | BMI | BMI < 100 | El backlog está aumentando y el mantenimiento sólo incrementará.
+        | BMI | BMI = 100 | El backlog de mantenimiento siempre es constante. Cada nueva semana hay que arreglar el mismo número de problemas. |
+
+        Realizr una serie de tiempo del BMI (gráfico de control).
+
+        - **Fix Response Time**: es el tiempo límite que debe pasar para que la solución de un error deba estar disponible al público, en función de la métrica **PoF** para cada error *i*. El **Fix Response Time Metric** es el promedio de todos estos tiempos límite. 
+
+        | Métrica | Fitness Function | Significado |
+        | ---- | ---- | ---- |
+        | FRT | FRT pequeña (1 día) | Pequeños FRT conduce a satisfacción del cliente. |
 
 ### 2.2 Funcionamiento Interno
 
