@@ -121,7 +121,7 @@ Si el usaurio da click en *Ok*, será redireccionado a la página principal.
         1. **Defect Density Rate (DDR)**: es el número de bugs<sup>2</sup> (Defectos Funcionales) que se registran al usar todas y cada una de las funcionalidades del sistema dividido entre el tamaño del sistema.
 
             $$
-            DDR = \frac{\hbox{número de bugs}}{LoC^3}
+            DDR = \frac{\hbox{Número de bugs}}{LoC^3}
             $$
 
             Esta métrica deberá calcularse cada 5 bugs reportados, hasta que el software lleve 2 años de liberación.
@@ -133,12 +133,12 @@ Si el usaurio da click en *Ok*, será redireccionado a la página principal.
         3. **Probability of Failure**: la probabilidad de fallo asociado a un bug presente *i*, también llamado *bug size*.
 
             $$
-            PoF_i = \frac{\hbox{caminos con bug en una funcionalidad}}{\hbox{total de caminos de la funcionalidad}}
+            PoF_i = \frac{\hbox{Caminos con bug en una funcionalidad}}{\hbox{Total de caminos de la funcionalidad}}
             $$
 
     2. **Lines of Code Defect Rates**: 
 
-        1. El LoC del sistema debe calcularse para el tamaño total del sistema, y cada que se calcule deberá reportarse como **LoC viejo (SSI)** y **LoC nuevo (CSI)**, refiriéndose al tamaño del sistema anterior y al tamaño después de la actualización más reciente: SSI por Shipped Source Instructions y CSI por Changed Source Instructions, ya que las LoC se miden por Source Instructions (instrucciones de código fuente).
+        El LoC del sistema debe calcularse para el tamaño total del sistema, y cada que se calcule deberá reportarse como **LoC viejo (SSI)** y **LoC nuevo (CSI)**, refiriéndose al tamaño del sistema anterior y al tamaño después de la actualización más reciente: SSI por Shipped Source Instructions y CSI por Changed Source Instructions, ya que las LoC se miden por Source Instructions (instrucciones de código fuente).
 
         Reportar en cada *release*:
 
@@ -147,13 +147,13 @@ Si el usaurio da click en *Ok*, será redireccionado a la página principal.
         - **Defect Rate per Thousand SSI (KSSI)**:
 
         $$
-        KSSI = \frac{bugs}{\hbox{Number of Thousand SSI}}
+        KSSI = \frac{bugs}{\hbox{Miles de SSI}}
         $$
 
         - **Defect Rate per Thousand CSI (KSSI)**:
 
         $$
-        KCSI = \frac{bugs}{\hbox{Number of Thousand CSI}}
+        KCSI = \frac{bugs}{\hbox{Miles de CSI}}
         $$
 
         Y así calcular el **Número total de Defectos (DDR)**:
@@ -161,6 +161,39 @@ Si el usaurio da click en *Ok*, será redireccionado a la página principal.
         $$
         DDR = KCSI \times KLoC
         $$
+
+    3. **Customer Problems Metrics**:
+
+        Desde el punto de vista del usuario, todos los problemas con los que se encuentran mientras usan el sistema, no sólo los **defectos válidos** (bugs), son problemas con el software. Incluso los problemas de usabilidad, documentación imprecisa, etc. 
+
+        Reportar:
+
+        - **Problems per User in a Month (PUM)**: el PUM es calculado cada mes después de que el software es liberado para el uso del mercado o usuarios selectos.
+
+        $$
+        PUM = \frac{\hbox{Customer problems}}{\hbox{Meses de uso}}
+        $$
+
+    4. **Defect Density During Testing**
+
+        Las métricas de **DDR** aplicadas durante el proceso de desarrollo están correlacionadas positivamente con el DDR del release futuro.
+        
+        Reportar en cada *push*<sup>5</sup> al código:
+
+        $$
+        DDR = \frac{\hbox{Número de bugs}}{LoC^3}
+        $$
+
+        Si el **DDR** durante el testing de desarrollo **es el mismo o menor que aquel DDR del release anterior**, entonces deberemos preguntarnos: ¿el testing para el release actual está deteriorando el producto futuro?
+
+        | Métrica | Fitness Function<sup>6</sup> | Acción |
+        | ---- | ---- | ---- |
+        | DDR | DDR actual <= DDR anterior | Seguimiento. Registrar el patrón de defectos que llegan (nuevos) al código fuente para identificar los tiempos entre fallas, de forma que los patrones indiquen la calidad por área desarollada.  |
+
+        El objetivo es buscar estabilizar la llegada de nuevos bugs en un **nivel bajo y constante.**
+
+    5. **Metrics for Maintenance**
+
 
 ### 2.2 Funcionamiento Interno
 
@@ -173,3 +206,7 @@ bugs<sup>2</sup>: en software, se le llama *bug* a un error o falla en la lógic
 LoC<sup>3</sup>: Lines of Code, es la medida estándar de un software.
 
 Fallar de forma fatal<sup>4</sup>: en software, un fallo fatal es que el sistema se interrumpa de forma abrupta y definitiva.
+
+push<sup>5</sup>: en software, un *push* es la acción de un desarrollador cuando añade el código que desarrolló al código fuente que es visible para todos los demás desarrolladores. Se recomienda hacer un *push* por cada funcionalidad completada.
+
+Fitness Function<sup>6</sup>
