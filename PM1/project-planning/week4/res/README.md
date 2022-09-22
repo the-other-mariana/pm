@@ -118,6 +118,21 @@ Unit Test(s)
 
     ![img](look/template-form-added-02.png)
 
+    Unit Test(s)
+
+    | Caso | Criterio de aceptación |
+    | --- | --- |
+    | Se da click en *Add Patient* | Aparece un modal con los 6 campos a llenar vacíos |
+    | Se da click en *Add Patient* y luego *Dismiss* | Aparece un modal con los 6 campos a llenar vacíos, para después desaparecer sin cambios en la base de datos. |
+    | Se da click en *Add Patient* y luego *Save* | Aparece un modal con los 6 campos a llenar vacíos, para después desaparecer haciendo cambios en la base de datos y mostrando el nuevo paciente en la lista. |
+    | Se da click sobre el nombre de algún paciente | Aparece la pantalla de todo lo guardado para ese paciente. Los Templates deben aparecer como botones del color seleccionado. |
+    | Se da click sobre el paciente pero no sobre el nombre | No sucede nada. |
+    | Ya en el paciente, se da click sobre algún botón de Template | Se muestra un modal con los campos especificados previamente en blanco.
+    | Ya en el paciente, se da click sobre algún botón de Template y después en *Save* | Se guarda como un documento en ese paciente, y se muestra en la lista con los datos capturados y en una ficha del color especificado, pero ligeramente más claro. |
+    | Ya en el paciente, se da click sobre algún botón de Template y después en *Dismiss* | Desaparece el modal y no hay cambios en la base de datos. |
+    | Ya en el paciente, se da click en *Delete* de algún documento guardado | Desaparece la ficha del documento sin alterar el orden de los demás documentos. |
+    | En Templates, se da click en *Delete* | En la pestaña de algún paciente con uno / varios documento(s) guardado(s) usando el Template borrado, debe(n) seguir ahí. Sólo el botón del Template desparece. |
+
 - Borrar un Template
 
     Supongamos que un usuario tiene el Template *Dosis Change* en morado y *Medicine Change* en azul. Al hacer click en el botón *Delete* en la esquina inferior derecha del Template *Medicine Change*, ese Template será borrado y ahora en cada paciente ya no estará disponible el botón azul de *Medicine Change*. Sin embargo, todos los documentos de tipo *Medicine Change* hasta el momento seguirán guardados en los pacientes que los posean.
@@ -445,6 +460,14 @@ Especificaciones:
 | LoC por archivo, I, CC, PI | Interno | Cada sprint. | Desarrollo |
 
 2. Cada uno de los puntos descritos en la [sección 2.1.1](https://github.com/the-other-mariana/pm/tree/master/PM1/project-planning/week4/res#211-aspecto) debe ser probado con una serie de *Unit Tests* descritos en la parte inferior. Un *Unit Test* prueba cada módulo de código para comprobar que *funcione* correctamente como el usuario final espera. Son pruebas programadas o automatizadas.
+
+3. Pruebas al final de cada sprint: 
+
+    - Al final de cada sprint, se deberá hacer una prueba agendada con algún usuario final. 
+
+    - Durante la misma se le debe presentar al usuario la funcionalidad que se está probando y registrar defectos funcionales y no funcionales. 
+
+    - Pruebas que no duren más de 10 min. Probar máximo 1 funcionalidad por prueba y un máximo de tres pruebas por sprint.
 
 ### Glosario
 ----
