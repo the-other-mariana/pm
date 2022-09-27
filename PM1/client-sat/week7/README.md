@@ -25,9 +25,9 @@
 ```
 	------------------------------------- plan
 				|
-		--------|------------------------ ejecución
+	~~~~--------|------------------------ ejecución
 			|	|
-		--------------------------------- monitoreo y control
+	~~~~--------------------------------- monitoreo y control
 ```
 
 - mientras más te desvías más caro es la acción de control. hay tolerancia o límite de desvío para corregir.
