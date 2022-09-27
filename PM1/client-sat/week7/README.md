@@ -23,11 +23,11 @@
 - ejecución toma el plan, monitoreo compara lo hecho con el plan y levanta alertas, control atiende alertas corrige y/o cambia el plan = el plan está en constante cambio por control.
 
 ```
-	------------------------------------- plan
-				|
-	~~~~--------|------------------------ ejecución
-			|	|
-	~~~~--------------------------------- monitoreo y control
+------------------------------------- plan
+			|
+~~~~--------|------------------------ ejecución
+		|	|
+~~~~--------------------------------- monitoreo y control
 ```
 
 - mientras más te desvías más caro es la acción de control. hay tolerancia o límite de desvío para corregir.
