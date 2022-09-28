@@ -542,6 +542,43 @@ Como se menciona en la seccion [sección 2.3 (Pruebas)](https://github.com/the-o
 
     ![img](arch/mmi-plot.PNG)
 
+## 4. Métodos de Medición
+
+Los métodos para medir las métricas presentadas serán mayoritariamente *automatizados*, es decir, por medio de *scripts* que analicen las líneas de código y calculen dichas métricas y las reporten al archivo `metrics.txt`. Estos *scripts* involucrarán alguno de los siguientes:
+
+- Lenguajes: Python o Shell
+
+- Regular Expressions strings
+
+- Git<sup>7</sup>:
+
+    - Cada *push* al código fuente deberá llevar un comentario por parte del programador, que comience con `update:` si agregó código nuevo, `fix:` si solucionó algún *bug* o `docs:` si se trata de documentación. De esta forma, se podrán analizar las métricas presentadas por medio de *scripts*. 
+
+Las formas de obtener las mediciones serán las siguientes para cada métrica:
+
+| Métrica | Significado | Método de medición |
+| --- | --- | --- |
+| DDR | Defect Density Rate | Python script que ejecute el comando `git log \| grep '^(fix)'` y calcule el DDR con el LoC |
+| MTTR | Mean Time To Failure | Manualmente, durante pruebas |
+| PoF | Probability of Failure | Manualmente, de ser posible, para bugs con prioridad |
+| KSSI | Defect Rate Per Thousand SSI | Python script que ejecute el comando `git log \| grep '^(fix)'` por cada 1K de líneas LoC del código fuente |
+| KCSI | Defect Rate Per Thousand CSI | Python script que ejecute el comando `git log \| grep '^(fix)'` por cada 1K de líneas mostradas al ejecutar `git diff` (líneas cambiadas) |
+| PUM | Problems per User in a Month | Python script que cuente el número de mensajes de users en el mes correspondiente | 
+| FBI | Fix Backlog Index | Manualmente, con los post its que quedan al final de la semana |
+| BMI | Backlog Management Index | Manualmente |
+| FRT | Fix Response Time | Python script que ejecute el comando `git log \| grep '^(fix)'` y calcule las diferencias entre fechas |
+| MMI | Modularity Maturity Index | Python script que calcula el % dados los archivos de código fuente |
+| MaxCG | Maximum elements in Cycle Groups | Manualmente |
+| PC | Propagation Cost | Python script que cuente `import` statements |
+| LoC por archivo | Lines of Code | Comando `grep -ve '^\s*$' <file.js> \| wc -l  >> metrics.txt` |
+| I | Número de Instrucciones por módulo | Python script |
+| CC | Complejidad Ciclomática | Manualmente |
+| PI | Profundidad de identación | Python script que cuente `\t` |
+
+## 5. Responsables
+
+## 6. Procedimientos: Situaciones fuera de control
+
 ### Glosario
 ----
 
@@ -556,3 +593,5 @@ Fallar de forma fatal<sup>4</sup>: en software, un fallo fatal es que el sistema
 push<sup>5</sup>: en software, un *push* es la acción de un desarrollador cuando añade el código que desarrolló al código fuente que es visible para todos los demás desarrolladores. Se recomienda hacer un *push* por cada funcionalidad completada.
 
 Fitness Function<sup>6</sup>: es una función que define los valores actuales de una métrica o los valores ideales.
+
+Git<sup>7</sup>: es un sistema de control de versión de archivos que utiliza una TUI (Terminal User Interface). Cada cambio registrado a algún archivo es guardado en este sistema con un hash único, fecha, líneas añadidas/eliminadas, junto con otras medidas.
