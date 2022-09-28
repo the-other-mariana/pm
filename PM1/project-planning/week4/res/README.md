@@ -473,7 +473,7 @@ Especificaciones:
 
 ### 3.1 Listas de verificación
 
-Como se menciona en la seccion [sección 2.3 (Pruebas)](https://github.com/the-other-mariana/pm/tree/master/PM1/project-planning/week4/res#23-pruebas), se deberán registrar los defectos funcionales y no funcionales de cada prueba con el usuario final, al término del sprint. La siguiente Hoja de Verificación será usada para dicho registro. 
+Como se menciona en la seccion [sección 2.3 (Pruebas)](https://github.com/the-other-mariana/pm/tree/master/PM1/project-planning/week4/res#23-pruebas), se deberán registrar los defectos funcionales y no funcionales de cada prueba con el usuario final, al término del sprint. La siguiente [Hoja de Verificación](https://github.com/the-other-mariana/pm/blob/master/PM1/project-planning/week4/res/verif-list.md) será usada para dicho registro. 
 
 ### Glosario
 ----
