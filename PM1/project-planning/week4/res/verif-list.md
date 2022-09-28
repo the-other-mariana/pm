@@ -1,10 +1,68 @@
 # Hoja de Verificación
 
-| Componente: ________ | Release: ________ | Tipo de inspección*: ________ |
-| ---- | ---- | ---- |
-| <td colspan=3>Descripción: |
-
-Cuentas de Defectos
+<table>
+    <thead>
+        <tr>
+            <th colspan=2>Sección</th>
+            <th colspan=5>Origen del Defecto</th>
+            <th colspan=3>Tipo de Defecto</th>
+            <th rowspan=2>Total</th>
+        </tr>
+        <tr>
+            <th>Función</th>
+            <th>LoC</th>
+            <th>RQ</th>
+            <th>SD</th>
+            <th>I0</th>
+            <th>I1</th>
+            <th>I2</th>
+            <th>LO</th>
+            <th>IF</th>
+            <th>DO</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
 
 
 
