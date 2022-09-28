@@ -1,5 +1,29 @@
 # Plan de Calidad
 
+## Índice
+
+1. Política
+
+2. Métricas
+
+    **2.1 Funcionalidad Externa**
+
+    2.1.1 Aspecto
+
+    2.1.2 Métricas
+
+    **2.2 Funcionamiento Interno**
+
+    2.2.1. Métricas
+
+    **2.3 Pruebas**
+
+3. Herramientas de Calidad
+
+    3.1 Listas de Verificación
+
+    3.2 Formatos y/o Plantillas
+
 ## 1. Política
 
 Estamos comprometidos a proveer una solución web de alta calidad, mantenible, escalable y segura por naturaleza, para todos los médicos del mundo que deseen manejar la información de su trabajo en un entorno digital sencillo y fácil de entender.
@@ -575,9 +599,36 @@ Las formas de obtener las mediciones serán las siguientes para cada métrica:
 | CC | Complejidad Ciclomática | Manualmente |
 | PI | Profundidad de identación | Python script que cuente `\t` |
 
-## 5. Responsables
+## 5. Inspecciones y Auditorías
 
-## 6. Procedimientos: Situaciones fuera de control
+- Los sprints tendrán, al final de cada uno, un Sprint Review donde se demostrará y validará el avance ante el Product Owner y el socio fundador. Este momento es distinto al de pruebas de usuario, ya que se mostrarán los avances y los resultados de las pruebas tanto de usuario como automatizadas. El Product Owner llevará a cabo el seguimiento de ser necesario.
+
+## 6. Responsables
+
+## 7. Procedimientos: Situaciones fuera de control
+
+A continuación se muestran las posibles causas de alguna situación fuera de control, junto con la(s) acción(es) a tomar.
+
+| Acción | 1 | 2 | 3 | 4 | 5 |
+| --- | --- | --- | --- | --- | --- |
+| Causa |  | | | | | 
+| Nuevo funcionamiento a implementar | | | | | | 
+| Problema o falla complejo | | | | | | 
+| Problema procedural | | | | | | 
+| Falla no reproducible | | | | | | 
+| Espera a respuesta del cliente | | | | | | 
+| Depende de otro problema | | | | | | 
+| Retrasos acumulados | | | | | | 
+| Carga de trabajo | | | | | | 
+| Comportamiento del cliente | | | | | | 
+
+| Acción | Significado |
+| --- | --- |
+| 1 | Notificación a Scrum Master. Scrum Master procede a pedir ayuda o consultoría para un seguimiento fuera de nuestro alcance. |
+| 2 | Creación de sprint adicional para tratar con los problemas por separado. Notificar al socio fundador. |
+| 3 | Documentar conocimiento de la(s) falla(s) hasta ese momento. Buscar otra alternativa de implementación y estimar duración. Notificar al socio fundador.
+| 4 | Product Owner debe ponerse en contacto con el cliente para aclarar situación o problemática. |
+| 5 | Notificar a Scrum Master. Realizar otra implementación pendiente mientras se espera o piensa la solución. |
 
 ### Glosario
 ----
