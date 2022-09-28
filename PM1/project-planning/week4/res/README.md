@@ -473,7 +473,74 @@ Especificaciones:
 
 ### 3.1 Listas de verificación
 
-Como se menciona en la seccion [sección 2.3 (Pruebas)](https://github.com/the-other-mariana/pm/tree/master/PM1/project-planning/week4/res#23-pruebas), se deberán registrar los defectos funcionales y no funcionales de cada prueba con el usuario final, al término del sprint. La siguiente [Hoja de Verificación](https://github.com/the-other-mariana/pm/blob/master/PM1/project-planning/week4/res/verif-list.md) será usada para dicho registro. 
+Como se menciona en la seccion [sección 2.3 (Pruebas)](https://github.com/the-other-mariana/pm/tree/master/PM1/project-planning/week4/res#23-pruebas), se deberán registrar los defectos funcionales y no funcionales de cada prueba con el usuario final, al término del sprint. La siguiente [Hoja de Verificación](https://github.com/the-other-mariana/pm/blob/master/PM1/project-planning/week4/res/verif-list.md) será usada para dicho registro.
+
+### 3.2 Formatos y/o Plantillas
+
+- Histogramas
+
+    - Histograma de métrica MTTF a lo largo de los meses de desarrollo
+
+    Ejemplo
+
+    ![img](arch/mttf-plot.PNG)
+
+- Gráficos de control
+
+    - Gráfico de control para la métrica BMI
+
+        - Límite de Control Central (LCC) = 100
+
+        - Límite de Control Superior (LCS) = $LCC +(3 \times \sigma)$
+
+        - Límite de Control Inferior (LCI) = $LCC -(3 \times \sigma)$
+
+        - Formato:
+
+        | Componente del gráfico | Especificaciones |
+        | ---- | ---- |
+        | Eje X | Como el BMI se calcula cada semana de desarrollo, el eje x será el tiempo $t$ por semana |
+        | Eje Y | Valor del BMI de la semana $t_i$ correspondiente |
+        | LCC | Línea continua |
+        | LCS, LCI | Línea punteada |
+
+    - Gráfico de control para la métrica FBI
+
+        - Límite de Control Central (LCC) = $\overline{FBI}$
+
+        - Límite de Control Superior (LCS) = $LCC +(3 \times \sigma)$
+
+        - Límite de Control Inferior (LCI) = $LCC -(3 \times \sigma)$
+
+        - Límite de Advertencia Superior (LAS) = $LCC +(2 \times \sigma)$
+
+        - Límite de Advertencia Inferior (LAI) = $LCC -(2 \times \sigma)$
+
+        - Formato:
+
+        | Componente del gráfico | Especificaciones |
+        | ---- | ---- |
+        | Eje X | Como el FBI se calcula cada semana de desarrollo, el eje x será el tiempo $t$ por semana |
+        | Eje Y | Valor del FBI de la semana $t_i$ correspondiente |
+        | LCC | Línea continua |
+        | LAS, LAI | Línea continua |
+        | LCS, LCI | Línea punteada |
+
+- Gráficos de dispersión
+
+    - Gráfico de dispersión con las siguientes propiedades:
+
+        - Formato:
+
+        | Componente del gráfico | Especificaciones |
+        | ---- | ---- |
+        | Eje X | Periodo de tiempo de desarrollo por semanas $t$ |
+        | Eje Y | Valor de la métrica MMI (0-10) |
+        | Tamaño del punto | LoC |
+
+    Ejemplo
+
+    ![img](arch/mmi-plot.PNG)
 
 ### Glosario
 ----
