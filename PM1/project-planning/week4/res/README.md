@@ -463,11 +463,17 @@ Especificaciones:
 
 3. Pruebas al final de cada sprint: 
 
-    - Al final de cada sprint, se deberá hacer una prueba agendada con algún usuario final. 
+    - Al final de cada sprint, se deberá hacer una prueba agendada con algún usuario final y/o socio fundador.
 
     - Durante la misma se le debe presentar al usuario la funcionalidad que se está probando y registrar defectos funcionales y no funcionales. 
 
-    - Pruebas que no duren más de 10 min. Probar máximo 1 funcionalidad por prueba y un máximo de tres pruebas por sprint.
+    - Pruebas que no duren más de 30 min, a modo de taller. Probar únicamente el entregable de dicho sprint.
+
+## 3. Herramientas de Calidad
+
+### 3.1 Listas de verificación
+
+Como se menciona en la seccion [sección 2.3 (Pruebas)](https://github.com/the-other-mariana/pm/tree/master/PM1/project-planning/week4/res#23-pruebas), se deberán registrar los defectos funcionales y no funcionales de cada prueba con el usuario final, al término del sprint. La siguiente Hoja de Verificación será usada para dicho registro. 
 
 ### Glosario
 ----
