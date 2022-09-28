@@ -2,27 +2,35 @@
 
 ## Índice
 
-1. Política
+1. [**Política**](https://github.com/the-other-mariana/pm/tree/master/PM1/project-planning/week4/res#1-pol%C3%ADtica)
 
-2. Métricas
+2. [**Métricas**](https://github.com/the-other-mariana/pm/tree/master/PM1/project-planning/week4/res#2-m%C3%A9tricas)
 
-    **2.1 Funcionalidad Externa**
+    [**2.1 Funcionalidad Externa**](https://github.com/the-other-mariana/pm/tree/master/PM1/project-planning/week4/res#21-funcionalidad-externa)
 
-    2.1.1 Aspecto
+    [2.1.1 Aspecto](https://github.com/the-other-mariana/pm/tree/master/PM1/project-planning/week4/res#211-aspecto)
 
-    2.1.2 Métricas
+    [2.1.2 Métricas](https://github.com/the-other-mariana/pm/tree/master/PM1/project-planning/week4/res#212-m%C3%A9tricas)
 
-    **2.2 Funcionamiento Interno**
+    [**2.2 Funcionamiento Interno**](https://github.com/the-other-mariana/pm/tree/master/PM1/project-planning/week4/res#22-funcionamiento-interno)
 
-    2.2.1. Métricas
+    [2.2.1. Métricas](https://github.com/the-other-mariana/pm/tree/master/PM1/project-planning/week4/res#221-m%C3%A9tricas)
 
-    **2.3 Pruebas**
+    [**2.3 Pruebas**](https://github.com/the-other-mariana/pm/tree/master/PM1/project-planning/week4/res#23-pruebas)
 
-3. Herramientas de Calidad
+3. [**Herramientas de Calidad**](https://github.com/the-other-mariana/pm/tree/master/PM1/project-planning/week4/res#3-herramientas-de-calidad)
 
-    3.1 Listas de Verificación
+    [3.1 Listas de Verificación](https://github.com/the-other-mariana/pm/tree/master/PM1/project-planning/week4/res#31-listas-de-verificaci%C3%B3n)
 
-    3.2 Formatos y/o Plantillas
+    [3.2 Formatos y/o Plantillas](https://github.com/the-other-mariana/pm/tree/master/PM1/project-planning/week4/res#32-formatos-yo-plantillas)
+
+4. [**Métodos de Medición**](https://github.com/the-other-mariana/pm/tree/master/PM1/project-planning/week4/res#4-m%C3%A9todos-de-medici%C3%B3n)
+
+5. [**Inspecciones y Auditorías**](https://github.com/the-other-mariana/pm/tree/master/PM1/project-planning/week4/res#5-inspecciones-y-auditor%C3%ADas)
+
+6. [**Responsables**](https://github.com/the-other-mariana/pm/tree/master/PM1/project-planning/week4/res#6-responsables)
+
+7. [**Procedimientos: Situaciones fuera de control**](https://github.com/the-other-mariana/pm/tree/master/PM1/project-planning/week4/res#7-procedimientos-situaciones-fuera-de-control)
 
 ## 1. Política
 
