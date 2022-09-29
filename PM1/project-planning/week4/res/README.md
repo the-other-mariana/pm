@@ -42,6 +42,8 @@ Lo que describe a un software a grandes rasgos es: ¿Cómo se ve? y ¿Cómo func
 
 ### 2.1 Funcionalidad Externa
 
+Las capturas de pantalla que se muestran a continuación es una vista preliminar en cuanto a estética y colores, mas los botones y proporciones son los requeridos. Cada sección posee una tabla llamada *Unit Test(s)* que indican la funcionalidad requerida de la pantalla presentada y sus criterios de aceptación.
+
 #### 2.1.1 Aspecto
 
 1. Login
@@ -356,7 +358,7 @@ Unit Test(s)
 
 ### 2.2 Funcionamiento Interno
 
-Se muestra a continuación una serie de métricas de arquitectura de software, las cuales son medidas estandarizadas que permitirán saber si un software es mantenible, escalable y *sano*, ya que si bien un software hace lo que debe de hacer, puede ser imposible de mantener y quedar obsoleto en poco tiempo.
+Se muestra a continuación una serie de métricas de arquitectura de software, las cuales son medidas estandarizadas que permitirán saber si un software es mantenible, escalable y *sano*, ya que si bien un software hace lo que debe de hacer, puede ser imposible de mantener y quedar obsoleto en poco tiempo. Además de la métrica, se presentan los rangos aceptados y no aceptados del producto con la métrica correspondiente.
 
 #### 2.2.1 Métricas
 
@@ -491,7 +493,7 @@ Especificaciones:
 | MMI, MaxCG, PC | Interno | Cada nuevo release, ya sea al público o cada sprint. | Ambas |
 | LoC por archivo, I, CC, PI | Interno | Cada sprint. | Desarrollo |
 
-2. Cada uno de los puntos descritos en la [sección 2.1.1](https://github.com/the-other-mariana/pm/tree/master/PM1/project-planning/week4/res#211-aspecto) debe ser probado con una serie de *Unit Tests* descritos en la parte inferior. Un *Unit Test* prueba cada módulo de código para comprobar que *funcione* correctamente como el usuario final espera. Son pruebas programadas o automatizadas.
+2. Cada uno de los puntos descritos en la [sección 2.1.1](https://github.com/the-other-mariana/pm/tree/master/PM1/project-planning/week4/res#211-aspecto) debe ser probado con una serie de *Unit Tests* descritos en la parte inferior de cada pantalla en dicha sección para considerarse aceptado. Un *Unit Test* prueba cada módulo de código para comprobar que *funcione* correctamente como el usuario final espera. Son pruebas programadas o automatizadas que se hacen en cuanto una nueva funcionalidad es codificada.
 
 3. Pruebas al final de cada sprint: 
 
@@ -611,6 +613,8 @@ Las formas de obtener las mediciones serán las siguientes para cada métrica:
 
 - Los sprints tendrán, al final de cada uno, un Sprint Review donde se demostrará y validará el avance ante el Product Owner y el socio fundador. Este momento es distinto al de pruebas de usuario, ya que se mostrarán los avances y los resultados de las pruebas tanto de usuario como automatizadas. El Product Owner llevará a cabo el seguimiento de ser necesario.
 
+- Fuera del Sprint Review, no se realizarán otro tipo de auditorías.
+
 ## 6. Responsables
 
 ## 7. Procedimientos: Situaciones fuera de control
@@ -619,24 +623,33 @@ A continuación se muestran las posibles causas de alguna situación fuera de co
 
 | Acción | 1 | 2 | 3 | 4 | 5 |
 | --- | --- | --- | --- | --- | --- |
-| Causa |  | | | | | 
-| Nuevo funcionamiento a implementar | | | | | | 
-| Problema o falla complejo | | | | | | 
-| Problema procedural | | | | | | 
-| Falla no reproducible | | | | | | 
-| Espera a respuesta del cliente | | | | | | 
-| Depende de otro problema | | | | | | 
-| Retrasos acumulados | | | | | | 
-| Carga de trabajo | | | | | | 
-| Comportamiento del cliente | | | | | | 
+| Causa | | | | | | 
+| Nuevo funcionamiento a implementar |  | x | x |  |  | 
+| Problema o falla complejo | x | x | x | | | 
+| Problema de otras áreas | | | | x | x | 
+| Falla no reproducible | | | x | x | | 
+| Espera a respuesta del cliente | | | | x | x | 
+| Depende de otro problema | | | | | x | 
+| Retrasos acumulados | x | x | | x | | 
+| Carga de trabajo | | x | | | | 
+| Comportamiento del cliente | | | | x | | 
 
 | Acción | Significado |
 | --- | --- |
 | 1 | Notificación a Scrum Master. Scrum Master procede a pedir ayuda o consultoría para un seguimiento fuera de nuestro alcance. |
-| 2 | Creación de sprint adicional para tratar con los problemas por separado. Notificar al socio fundador. |
+| 2 | Creación de sprint adicional para tratar con los problemas por separado. Notificar al socio fundador y Scrum Master. |
 | 3 | Documentar conocimiento de la(s) falla(s) hasta ese momento. Buscar otra alternativa de implementación y estimar duración. Notificar al socio fundador.
-| 4 | Product Owner debe ponerse en contacto con el cliente para aclarar situación o problemática. |
+| 4 | Product Owner debe ponerse en contacto con el cliente para aclarar situación o problemática.* |
 | 5 | Notificar a Scrum Master. Realizar otra implementación pendiente mientras se espera o piensa la solución. |
+
+*De ser el caso de encontrarse en un problema sin salida evidente, notificarle al cliente y presentarle lo siguiente:
+
+1. Presentar el problema.
+
+2. Presentar 3 soluciones o alternativas.
+
+3. Presentar nuestra sugerencia.
+
 
 ### Glosario
 ----
