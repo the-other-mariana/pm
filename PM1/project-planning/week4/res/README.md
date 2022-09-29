@@ -42,7 +42,7 @@ Lo que describe a un software a grandes rasgos es: ¿Cómo se ve? y ¿Cómo func
 
 ### 2.1 Funcionalidad Externa
 
-Las capturas de pantalla que se muestran a continuación es una vista preliminar en cuanto a estética y colores, mas los botones y proporciones son los requeridos. Cada sección posee una tabla llamada *Unit Test(s)* que indican la funcionalidad requerida de la pantalla presentada y sus criterios de aceptación.
+Las capturas de pantalla que se muestran a continuación es una vista preliminar en cuanto a estética y colores (puede cambiar), además el nombre está sugjeto a cambios. Los botones y proporciones sí son los requeridos. Cada sección posee una tabla llamada *Unit Test(s)* que indican la funcionalidad requerida de la pantalla presentada y sus criterios de aceptación.
 
 #### 2.1.1 Aspecto
 
@@ -616,6 +616,15 @@ Las formas de obtener las mediciones serán las siguientes para cada métrica:
 - Fuera del Sprint Review, no se realizarán otro tipo de auditorías.
 
 ## 6. Responsables
+
+| Miembro | Departamento | Función |
+| --- | --- | --- |
+| Mariana Ávalos | Desarrollo | Líder/Programación |
+| Cristina Vázquez	|	Diseño UI	|	Diseño web	|
+| Marcelo Álvarez	|	Desarrollo 	|	Dir. Ingeniería/Calidad |
+| Susana Jaramillo   | Logística   | Coordinación/difusión |
+| Juan Carlos Medina  | Desarrollo  | Programación |
+
 
 ## 7. Procedimientos: Situaciones fuera de control
 
