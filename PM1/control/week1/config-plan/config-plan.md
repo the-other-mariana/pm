@@ -16,17 +16,17 @@
    
     2. [Change Management System: procesos de integración de cambios si una solicitud tiene impacto](https://github.com/the-other-mariana/pm/blob/master/PM1/control/week1/config-plan/config-plan.md#22-change-management-system-procesos-de-integraci%C3%B3n-de-cambios-si-una-solicitud-tiene-impacto)
    
-       1. [Requerimientos: impacto en costo, tiempo y recursos]()
+       1. Requerimientos: impacto en costo, tiempo y recursos
    
-       2. [Change Control Board (CCB)]()
+       2. Change Control Board (CCB)
    
     3. [Actualización después de cambios](https://github.com/the-other-mariana/pm/blob/master/PM1/control/week1/config-plan/config-plan.md#23-actualizaci%C3%B3n-despu%C3%A9s-de-cambios)
    
-       1. [Registro de Lecciones Aprendidas]()
+       1. Registro de Lecciones Aprendidas
    
-       2. [Implementación en Project Baseline]()
+       2. Implementación en Project Baseline
    
-       3. [Registro de cambios implementados]()
+       3. Registro de cambios implementados
 
 ## 1. Configuration Items (CIs)
 
