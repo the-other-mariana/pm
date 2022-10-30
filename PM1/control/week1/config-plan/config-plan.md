@@ -2,35 +2,31 @@
 
 ## Contenido
 
-1. Configuration Items (CIs)
+1. [Configuration Items (CIs)](https://github.com/the-other-mariana/pm/blob/master/PM1/control/week1/config-plan/config-plan.md#1-configuration-items-cis)
 
-    1. Lista de CIs (baseline): artefactos del proyecto que deben ser manejados con Control de Configuración.
+    1. [Lista de CIs (baseline)](https://github.com/the-other-mariana/pm/blob/master/PM1/control/week1/config-plan/config-plan.md#11-lista-de-cis)
 
-    2. Interdepencias en CIs.
+    2. [Interdepencias en CIs](https://github.com/the-other-mariana/pm/blob/master/PM1/control/week1/config-plan/config-plan.md#12-interdependencias-de-cis)
 
-    3. Registro de información de CIs.
+    3. [Registro de información de CIs](https://github.com/the-other-mariana/pm/blob/master/PM1/control/week1/config-plan/config-plan.md#13-registro-de-informaci%C3%B3n-de-cis)
 
-2. Control de Configuración
+2. [Control de Configuración](https://github.com/the-other-mariana/pm/blob/master/PM1/control/week1/config-plan/config-plan.md#2-control-de-la-configuraci%C3%B3n)
 
-    1. Solicitudes de cambio de CIs.
+    1. [Solicitudes de cambio de CIs](https://github.com/the-other-mariana/pm/blob/master/PM1/control/week1/config-plan/config-plan.md#21-solicitudes-de-cambio-de-cis)
    
-    2. Change Management System: procesos de integración de cambios si una solicitud tiene impacto.
+    2. [Change Management System: procesos de integración de cambios si una solicitud tiene impacto](https://github.com/the-other-mariana/pm/blob/master/PM1/control/week1/config-plan/config-plan.md#22-change-management-system-procesos-de-integraci%C3%B3n-de-cambios-si-una-solicitud-tiene-impacto)
    
-       1. Requerimientos: impacto en costo, tiempo y recursos.
+       1. [Requerimientos: impacto en costo, tiempo y recursos]()
    
-       2. Change Control Board (CCB).
+       2. [Change Control Board (CCB)]()
    
-       3. Outputs.
+    3. [Actualización después de cambios](https://github.com/the-other-mariana/pm/blob/master/PM1/control/week1/config-plan/config-plan.md#23-actualizaci%C3%B3n-despu%C3%A9s-de-cambios)
    
-    3. Actualización después de cambios.
+       1. [Registro de Lecciones Aprendidas]()
    
-       1. Requerimientos y documentación.
+       2. [Implementación en Project Baseline]()
    
-       2. Registro de Lecciones Aprendidas.
-   
-       3. Implementación en Project Baseline.
-   
-       4. Registro de cambios implementados.
+       3. [Registro de cambios implementados]()
 
 ## 1. Configuration Items (CIs)
 
@@ -164,7 +160,7 @@ Cada ítem conocido como CI debe de ser registrado con los siguientes campos mí
 
 - versión o año
 
-Una vez que se cuenta con esta información como mínimo, se puede registrar como CI en la [Sección 1.1]().
+Una vez que se cuenta con esta información como mínimo, se puede registrar como CI en la [Sección 1.1](https://github.com/the-other-mariana/pm/blob/master/PM1/control/week1/config-plan/config-plan.md#11-lista-de-cis).
 
 ## 2. Control de la Configuración
 
@@ -202,9 +198,9 @@ En caso de que, durante el desarrollo de los entregables del proyecto, se envíe
 
 - Una vez en manos del Project Manager, éste deberá guardar el documento en el repositorio oficial del proyecto, a fin de que el historial de cambios se mantenga.
 
-- En el formato de la [sección anterior]() se establece que se debe incluir las implicaciones del cambio en un CI que se solicita. En este campo se incluyen el costo, tiempo y recursos que dicho cambio implicaría. De no incluir estos tres impactos, la solicitud será rechazada automáticamente.
+- En el formato de la [sección anterior](https://github.com/the-other-mariana/pm/blob/master/PM1/control/week1/config-plan/config-plan.md#21-solicitudes-de-cambio-de-cis) se establece que se debe incluir las implicaciones del cambio en un CI que se solicita. En este campo se incluyen el costo, tiempo y recursos que dicho cambio implicaría. De no incluir estos tres impactos, la solicitud será rechazada automáticamente.
 
-- Adicionalmente, en la sección de *Acción Correctiva* del formato en la [sección anterior]() se deberá incluir cuál es la versión/estado actual del CI que se pretende cambiar.
+- Adicionalmente, en la sección de *Acción Correctiva* del formato en la [sección anterior](https://github.com/the-other-mariana/pm/blob/master/PM1/control/week1/config-plan/config-plan.md#21-solicitudes-de-cambio-de-cis) se deberá incluir cuál es la versión/estado actual del CI que se pretende cambiar.
 
 **2.2.2. Change Control Board (CCB)**
 
