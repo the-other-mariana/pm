@@ -127,7 +127,7 @@ Si tomamos en cuenta el siguiente concepto:
 
 > Average Component Dependency (ACD): how many elements a randomly selected element would depend on, including itself,
 
-descrito en el libro *Software Architecture Metrics* de Christian Ciceri, publicado por O'Reilly en 2022, **el ACD será pues el nombre de los componentes o ítems que se modifican si cada CI de la tabla anterior cambiara**. Los CI's que no se incluyen en la tabla siguiente no presentan ninguna interdependencia.
+descrito en el libro *Software Architecture Metrics* de Christian Ciceri, publicado por O'Reilly en 2022, **el CD será pues el nombre de los CIs que se modifican si cada CI de la tabla anterior cambiara**. Los CI's que no se incluyen en la tabla siguiente no presentan ninguna interdependencia.
 
 | CI | ACD |
 | --- | --- |
