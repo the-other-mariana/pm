@@ -20,9 +20,7 @@
 
     2. Responsabilidades del Change Control Board (CCB)
 
-    3. Proceso de revisión de Solicitudes de Cambio
-
-    4. Proceso de integración de cambios
+    3. Proceso de integración de cambios
 
 ## 1. Solicitudes de Cambio
 
@@ -122,5 +120,37 @@ Los cambios a código fuente se integran mediante el proceso descrito en la Secc
 
 ### 2.1. Matriz RACI: Responsabilidades del Equipo
 
-El Proyect Manager recibe la Solicitud de Cambio y, basándose en la matriz RACI a continuación, decide a quién se le informa de dicha solicitud.
+El Proyect Manager recibe la Solicitud de Cambio y, basándose en la matriz RACI a continuación, decide a quién se le informa de dicha solicitud según sea la etapa en la que se presente el cambio:
 
+![Image](res/raci.png)
+
+Donde:
+
+- R: Responsible
+- A: Accountable
+- C: Consulted
+- I: Informed
+
+Una vez que se identifique a quién involucra en el cambio solicitado, se entra en la siguiente fase del sistema de integración de cambios.
+
+### 2.2. Responsabilidades del Change Control Board (CCB)
+
+El Change Control Board (CCB) es el comité de aprobación de una Solicitud de Cambio, y como tal, es la entidad responsable de aprobar o rechazar cambios. Está conformado por el Project Manager y los líderes de cada departamento del proyecto.
+
+Como un cambio que requiere de una Solicitud de Cambio es, por definición, un cambio que impacta significativamente al proyecto, entonces los involucrados deben de incorporarse al CCB de ese cambio. Por lo tanto, una vez que el Project Manager identifica por medio de la matriz RACI quiénes son los involucrados en el cambio, deberá convocarlos como parte del CCB, si es que no son ya miembros.
+
+Las responsabilidades del CCB ante una Solicitud de Cambio son:
+
+- Cada miembro del CCB deberá analizar con su departamento correspondiente la propuesta de la Solicitud. 
+
+- Cada miembro del CCB deberá prepara los costos, tiempo y recursos que el cambio involucraría en su departamento y redactarlo brevemente en un documento.
+
+- Agendar una reunión donde todos los miembros del CCB estén presentes. Si es necesario, el Project Manager deberá invitar al socio fundador.
+
+- Aprobar o rechazar la Solicitud de Cambio durante la reunión. Si la solicitud es aceptada, la sección del formato llamada *Firma de Aprobación* quedará firmada por el Project Manager. Éste también deberá reenviar el formato firmado al solicitante por correo electrónico.
+
+- Si la Solicitud de Cambio es rechazada, el CCB deberá redactar un documento breve donde se explique la razón del rechazo. El Project Manager deberá enviarlo al solicitante por correo electrónico.
+
+- Todos los documentos generados durante esta etapa de revisión de la solicitud deberán guardarse como parte del historial en el repositorio de documentos del proyecto.
+
+### 2.3. Proceso de integración de cambios
