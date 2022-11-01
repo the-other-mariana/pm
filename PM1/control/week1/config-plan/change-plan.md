@@ -36,9 +36,9 @@ El desarrollo del código fuente se realizará por parte de los miembros del equ
 
 - Existen dos ramas de código fuente aceptado: `master` y `develop`. Con esto, existen dos versiones preliminares del código fuente visible para todos los integrantes del equipo de desarrollo. 
 
-    - Rama `master`: contiene código fuente aceptado para **producción**. El código presente en esta rama es aquel que representa el entregable final del proyecto. Cambios a esta rama sólo se permiten para el líder del equipo de desarrollo, provenientes de la rama `develop`.
+    - Rama `master`: contiene código fuente aceptado para **producción**. El código presente en esta rama es aquel que representa el entregable final del proyecto. **Cambios a esta rama sólo se permiten para el líder del equipo de desarrollo**, provenientes de la rama `develop`.
 
-    - Rama `develop`: contiene el código fuente aceptado para **testing**. Es aquella versión del código que se desarrolla y está lista para las pruebas automatizadas y de usuario.
+    - Rama `develop`: contiene el código fuente aceptado para **testing**. Es aquella versión del código que se desarrolla y está lista para las pruebas automatizadas y de usuario. **Cambios a esta rama son permitidos para cualquier miembro del equipo de desarrollo**.
 
 - Cualquier cambio que un miembro del equipo de desarrollo quiera hacer, debe seguir el siguiente procedimiento:
 
@@ -64,17 +64,19 @@ El desarrollo del código fuente se realizará por parte de los miembros del equ
 
         ![Image](res/4.png)
 
-    - El *Pull Request* creado por el solictante del cambio sólo podrá ser incorporado a la rama `develop` por medio de un *Merge* si se cumple lo siguiente:
+    - El *Pull Request* creado por el solicitante del cambio sólo podrá ser incorporado a la rama `develop` por medio de un *Merge* si se cumple lo siguiente:
 
         - Al menos 1 miembro del equipo (sin incluir al solicitante) debe hacer un *Code Review* y aprobar los cambios de la rama en cuestión.
 
-        - La rama delo solicitante no presenta *Merge Conflicts* sin resolver.
+        - La rama del solicitante no presenta *Merge Conflicts* sin resolver.
 
         - No hay conversaciones pendientes de responder en el *Pull Request* de Github.
 
         ![Image](res/5.png)
 
     - Una vez incorporada la rama del solicitante a `develop`, la rama debe ser borrada por el solictante.
+
+Con este proceso se lleva a cambio el control de integración de cambios al código fuente, y con el uso de las herramientas mencionadas queda documentada cada acción realizada, además de que analiza automáticamente las implicaciones de los cambios y los muestra como *Merge Conflicts*. Por lo tanto, éste es el sistema de control de la integración de cambios al código fuente y no se requieren acciones adicionales.
 
 **1.1.2. Otras solicitudes de cambio**
 
@@ -120,7 +122,7 @@ Los cambios a código fuente se integran mediante el proceso descrito en la Secc
 
 ### 2.1. Matriz RACI: Responsabilidades del Equipo
 
-El Proyect Manager recibe la Solicitud de Cambio y, basándose en la matriz RACI a continuación, decide a quién se le informa de dicha solicitud según sea la etapa en la que se presente el cambio:
+El Proyect Manager recibe la Solicitud de Cambio y, basándose en la matriz RACI a continuación, decide a quién se le informa, consulta o responsabiliza dicha solicitud según sea la etapa en la que se presente el cambio:
 
 ![Image](res/raci.png)
 
@@ -143,14 +145,27 @@ Las responsabilidades del CCB ante una Solicitud de Cambio son:
 
 - Cada miembro del CCB deberá analizar con su departamento correspondiente la propuesta de la Solicitud. 
 
-- Cada miembro del CCB deberá prepara los costos, tiempo y recursos que el cambio involucraría en su departamento y redactarlo brevemente en un documento.
+- Cada miembro del CCB deberá preparar los costos, tiempo y recursos que el cambio involucraría en su departamento y redactarlo brevemente en un documento.
 
 - Agendar una reunión donde todos los miembros del CCB estén presentes. Si es necesario, el Project Manager deberá invitar al socio fundador.
 
-- Aprobar o rechazar la Solicitud de Cambio durante la reunión. Si la solicitud es aceptada, la sección del formato llamada *Firma de Aprobación* quedará firmada por el Project Manager. Éste también deberá reenviar el formato firmado al solicitante por correo electrónico.
+- Aprobar o rechazar la Solicitud de Cambio durante la reunión, basándose en los impactos que cada departamento plantea. Si la solicitud es aceptada, la sección del formato llamada *Firma de Aprobación* quedará firmada por el Project Manager. Éste también deberá reenviar el formato firmado al solicitante por correo electrónico.
 
 - Si la Solicitud de Cambio es rechazada, el CCB deberá redactar un documento breve donde se explique la razón del rechazo. El Project Manager deberá enviarlo al solicitante por correo electrónico.
 
 - Todos los documentos generados durante esta etapa de revisión de la solicitud deberán guardarse como parte del historial en el repositorio de documentos del proyecto.
 
 ### 2.3. Proceso de integración de cambios
+
+Only approved changes should be incorporated into a revised baseline
+
+Implementarlos: Tools
+
+Documentos (PM Plan, Quality) updated:
+
+- Activity List
+- Assumption Log
+- Lessons Learned Register
+- Requirements Documentation
+- Risk Register
+- Stakeholder register

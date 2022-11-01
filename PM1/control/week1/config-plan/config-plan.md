@@ -34,7 +34,9 @@
 
 A continuación se muestran los CIs del proyecto. Estos elementos son aquellos que pueden sufrir cambios, y de ser así, deben registrarse y actualizarse para que el proyecto se mantenga consistente y funcional.
 
-La lista de CIs está dividida por área: Diseño, Logística, y Programación/Hosting, más otras dos secciones: Hardware y Recursos Humanos. En el rubro de **Versión** se incluye, de ser necesario, la versión o tipo de elemento que el correspondiente ítem requiere.
+La lista de CIs está dividida por áreas: Diseño, Logística y Programación/Hosting, más otras dos secciones: Hardware y Recursos Humanos. En el rubro de **Versión** se incluye, de ser necesario, la versión o tipo de elemento que el correspondiente ítem requiere.
+
+Cualquier elemento dentro de las siguientes tablas, de necesitar un cambio, deberá seguir el proceso formal del presente plan.
 
 - Diseño
 
@@ -125,7 +127,7 @@ La lista de CIs está dividida por área: Diseño, Logística, y Programación/H
 
 Si tomamos en cuenta el siguiente concepto:
 
-> Average Component Dependency (ACD): how many elements a randomly selected element would depend on, including itself,
+> Average Component Dependency (ACD): how many elements a randomly selected element would depend on, including itself (Ciceri, 2022),
 
 descrito en el libro *Software Architecture Metrics* de Christian Ciceri, publicado por O'Reilly en 2022, **el CD será pues el nombre de los CIs que se modifican si cada CI de la tabla anterior cambiara**. Los CI's que no se incluyen en la tabla siguiente no presentan ninguna interdependencia.
 
@@ -150,7 +152,7 @@ descrito en el libro *Software Architecture Metrics* de Christian Ciceri, public
 | Socio Fundador | Project Manager |
 | Logística | Project Manager |
 
-*Nota: Las interdependencias de la tabla anterior son unilaterales: si un CI cambia y hace que cambien los CIs de la columna ACD, no necesariamente significa que si cambia uno de los CIs de esa columna ACD el CI de la columna de la izquierda cambia.*
+*Nota: Las interdependencias de la tabla anterior son unilaterales: si un CI de la columna de la izquierda cambia, los CIs de la columna ACD también cambian; pero no necesariamente significa que si cambia uno de los CIs de esa columna ACD el CI de la columna de la izquierda cambia.*
 
 ### 1.3. Registro de Información de CIs
 
@@ -158,9 +160,11 @@ Cada ítem conocido como CI debe de ser registrado con los siguientes campos mí
 
 - Nombre completo del elemento
 
-- versión o año
+- Versión o año
 
-Una vez que se cuenta con esta información como mínimo, se puede registrar como CI en la [Sección 1.1](https://github.com/the-other-mariana/pm/blob/master/PM1/control/week1/config-plan/config-plan.md#11-lista-de-cis).
+- Interdependencias con los CIs existentes
+
+Una vez que se cuenta con esta información como mínimo, se puede registrar como CI en la [Sección 1.1](https://github.com/the-other-mariana/pm/blob/master/PM1/control/week1/config-plan/config-plan.md#11-lista-de-cis), con su correspondiente registro de interdependencias en la tabla de la [Sección 1.2](https://github.com/the-other-mariana/pm/blob/master/PM1/control/week1/config-plan/config-plan.md#12-interdependencias-de-cis).
 
 ## 2. Control de la Configuración
 
@@ -168,7 +172,7 @@ Una vez que se cuenta con esta información como mínimo, se puede registrar com
 
 Una solicitud de cambio de CIs se tratará diferente que una solicitud de cambio de cualquier otra índole, ya que cambiar la versión de alguno de los elementos mencionados como CIs puede poner en riesgo la operación y funcionalidad del proyecto.
 
-La Solicitud de Cambio de CIs (SCCI) es un documento con una propuesta formal para **modificar un CI en su versión o sustituirlo por otro nuevo CI**. Es importante tomar en cuenta que:
+La Solicitud de Cambio de CIs (SCCI) es un documento con una propuesta formal para **modificar un CI en su versión o sustituirlo por otro nuevo CI**, y es el primer paso para que se lleve a su posible implementación. Es importante tomar en cuenta que:
 
 > Una SCCI se envía por cualquier cambio que se quiera hacer en un CI, por más pequeño que parezca.
 
@@ -188,9 +192,9 @@ A raíz del formato anterior se concluye que se puede solicitar el cambio de var
 
 **2.2.1. Requerimientos**
 
-En caso de que, durante el desarrollo de los entregables del proyecto, se envíe un SCCI, éste deberá tener las siguientes características:
+En caso de que, durante el desarrollo de los entregables del proyecto, se requiera enviar un SCCI, éste deberá tener las siguientes características:
 
-- Será redactado por el miembro del equipo del proyecto o cualquier stakeholder que solicita el cambio.
+- El formato será llenado por el miembro del equipo del proyecto o cualquier stakeholder que solicita el cambio.
 
 - Deberá ser enviado únicamente al Project Manager a través de correo electrónico a la dirección: 0197495@up.edu.mx.
 
@@ -198,7 +202,7 @@ En caso de que, durante el desarrollo de los entregables del proyecto, se envíe
 
 - Una vez en manos del Project Manager, éste deberá guardar el documento en el repositorio oficial del proyecto, a fin de que el historial de cambios se mantenga.
 
-- En el formato de la [sección anterior](https://github.com/the-other-mariana/pm/blob/master/PM1/control/week1/config-plan/config-plan.md#21-solicitudes-de-cambio-de-cis) se establece que se debe incluir las implicaciones del cambio en un CI que se solicita. En este campo se incluyen el costo, tiempo y recursos que dicho cambio implicaría. De no incluir estos tres impactos, la solicitud será rechazada automáticamente.
+- En el formato de la [sección anterior](https://github.com/the-other-mariana/pm/blob/master/PM1/control/week1/config-plan/config-plan.md#21-solicitudes-de-cambio-de-cis) se establece que se deben incluir las implicaciones del cambio en un CI que se solicita. En este campo se incluyen el costo, tiempo y recursos que dicho cambio implicaría. De no incluir estos tres impactos, la solicitud será rechazada automáticamente.
 
 - Adicionalmente, en la sección de *Acción Correctiva* del formato en la [sección anterior](https://github.com/the-other-mariana/pm/blob/master/PM1/control/week1/config-plan/config-plan.md#21-solicitudes-de-cambio-de-cis) se deberá incluir cuál es la versión/estado actual del CI que se pretende cambiar.
 
@@ -206,11 +210,11 @@ En caso de que, durante el desarrollo de los entregables del proyecto, se envíe
 
 La aprobación o rechazo de una SCCI es responsabilidad del Change Control Board del equipo, el cual incluye: el Proyect Manager y los directores de cada una de las áreas del proyecto. En caso necesario (bajo criterio del Project Manager), el socio fundador podría estar incluido en el CCB. Las responsabilidades del CCB ante un SCCI son:
 
-- Cada miembro del CCB deberá analizar con su departamento correspondiente la propuesta del SCCI.
+- Cada miembro del CCB deberá analizar con su departamento correspondiente la propuesta del SCCI. Para ello, es necesario que el Project Manager reenvíe por correo electrónico a los miembros del CCB el formato SCCI.
 
 - Agendar una reunión donde todos los miembros del CCB estén presentes.
 
-- Aprobar o rechazar el SCCI durante la reunión.
+- Aprobar o rechazar el SCCI durante la reunión. Analizar las posibles implicaciones del cambio en todos los departamentos, y emitir una decisión.
 
 - Informar al solicitante la decisión sobre su SCCI en un documento enviado por correo electrónico.
 
@@ -218,7 +222,9 @@ La aprobación o rechazo de una SCCI es responsabilidad del Change Control Board
 
 - Enviar esta explicación al solicitante.
 
-### 2.3. Actualización después de cambios.
+- Guardar todos los documentos generados en el repositorio del proyecto, en una sola carpeta, donde el nombre de ésta será el número del SCCI.
+
+### 2.3. Actualización después de cambios
 
 Esta sección entra en rigor cuando una SCCI es aceptada.
 
@@ -240,9 +246,9 @@ El formato de una lección aprendida es:
 
 **2.3.2. Implementación en Project Baseline**
 
-Al aceptar la SCCI, el CCB está consciente de que tal cambio se deberá implementar cuanto antes. Por lo tanto, el cambio(s) en la SCCI aceptada **se vuelve una nueva Tarea en el Product Backlog**
+Al aceptar la SCCI, el CCB está consciente de que tal cambio se deberá implementar cuanto antes. Por lo tanto, el cambio(s) en la SCCI aceptada **se vuelve una nueva Tarea en el Product Backlog**.
 
-- El Project Manager es el responsable de incluir esta nueva Tarea.
+- El Project Manager es el responsable de incluir esta nueva Tarea en el Product Backlog.
 
 - El equipo de desarrollo (Scrum Team) deberá reunirse para priorizar la nueva tarea dentro del Product Backlog para actualizarlo.
 
@@ -261,5 +267,7 @@ En total, cuando un SCCI es aceptado e implementado, el número de registros de 
 4. Si la SCCI es aprobada, se contará con el documento de Lección Aprendida correspondiente.
 
 5. Documentación de la implementación de la Tarea nueva en el sprint que le corresponda, como cualquier otro cambio. Documentación de cambios se especifica con más en el Plan de Gestión de Cambios.
+
+6. Actualización de la Tabla de CIs y Tabla de Interdependencias de CIs.
 
 *Nota: Todos los documentos de esta sección deberán estar almacenados en el repositorio del proyecto*.
