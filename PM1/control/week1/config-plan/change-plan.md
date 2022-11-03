@@ -1,6 +1,6 @@
 ---
 title: "Plan de Control de Cambios"
-author: [Control y Ejeución Operacional de Proyectos]
+author: [Control y Ejecución Operacional de Proyectos]
 date: "2022"
 keywords: [Markdown, Example]
 ...
@@ -67,7 +67,7 @@ El desarrollo del código fuente se realizará por parte de los miembros del equ
 
         ![Image](res/3.png)
   
-    - Después, deberá solicitar que su cambio sea incorporado a la rama `develop` por medio de un *Pull Request* usando [Github](), desde su rama a `develop`.
+    - Después, deberá solicitar que su cambio sea incorporado a la rama `develop` por medio de un *Pull Request* usando [**github.com**](https://github.com/), desde su rama a `develop`.
 
         ![Image](res/4.png){width=4cm}
 

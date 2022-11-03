@@ -1,3 +1,10 @@
+---
+title: "Plan de Gestión de Configuración"
+author: [Control y Ejecución Operacional de Proyectos]
+date: "2022"
+keywords: [Markdown, Example]
+...
+
 # Plan de Gestión de Configuración
 
 ## Contenido
