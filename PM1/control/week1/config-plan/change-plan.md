@@ -29,6 +29,14 @@ keywords: [Markdown, Example]
 
     3. [Proceso de integración de cambios](https://github.com/the-other-mariana/pm/blob/master/PM1/control/week1/config-plan/change-plan.md#23-proceso-de-integraci%C3%B3n-de-cambios)
 
+        1. Protocolo Implementación de Cambios
+
+        2. Implementación de Controles de Riegos
+
+        3. Modificación de Documentos
+
+        4. Evaluación de Resultados
+
 ## 1. Solicitudes de Cambio
 
 Una solicitud de cambio es una propuesta formal para modificar cualquier documento, entregable o línea base del proyecto. Cambios en los ítems de configuración (CIs) se manejan bajo el [Plan de Configuración](https://github.com/the-other-mariana/pm/blob/master/PM1/control/week1/config-plan/config-plan.md). Cualquier otro cambio, se maneja bajo los procesos que se describen en el presente plan.
@@ -61,15 +69,15 @@ El desarrollo del código fuente se realizará por parte de los miembros del equ
 
         donde `<prefijo>` puede ser `fix`, `update` o `docs`; y `<msg>` será una breve descripción del código que se está subiendo.
 
-        ![Image](res/2.png){width=7cm}
+        ![Image](res/2.png){width=8cm}
 
     - Cuando la acción que el miembro del equipo quiere implementar está terminada, deberá hacer un último *commit y push* a su rama local que lo indique. 
 
-        ![Image](res/3.png)
+        ![Image](res/3.png){width=8cm}
   
     - Después, deberá solicitar que su cambio sea incorporado a la rama `develop` por medio de un *Pull Request* usando [**github.com**](https://github.com/), desde su rama a `develop`.
 
-        ![Image](res/4.png){width=4cm}
+        ![Image](res/4.png){width=6cm}
 
     - El *Pull Request* creado por el solicitante del cambio sólo podrá ser incorporado a la rama `develop` por medio de un *Merge* si se cumple lo siguiente:
 
@@ -79,7 +87,7 @@ El desarrollo del código fuente se realizará por parte de los miembros del equ
 
         - No hay conversaciones pendientes de responder en el *Pull Request* de Github.
 
-        ![Image](res/5.png){width=7cm}
+        ![Image](res/5.png){width=8cm}
 
     - Una vez incorporada la rama del solicitante a `develop`, la rama debe ser borrada por el solictante.
 
@@ -164,7 +172,7 @@ Las responsabilidades del CCB ante una Solicitud de Cambio son:
 
 ### 2.3. Proceso de integración de cambios
 
-**2.3.1 Protocolo Implementación de Cambios**
+**2.3.1 Protocolo de Implementación de Cambios**
 
 Esta sección sólo entrará en vigor en aquellos casos donde la Solicitud de Cambio es aceptada. De lo contrario, el proceso termina con el rechazo o aplazamiento vistos en la sección anterior. 
 
@@ -172,7 +180,7 @@ El inicio del protocolo de implementación del cambio aceptado se dará con la i
 
 Después, se requiere una evaluación breve de los riesgos del cambio, mediante el cual se busca estimar los fallos y condiciones posibles que se puedan generar por dicho cambio. La evaluación consiste en replicar la siguiente matriz con la información correspondiente al cambio:
 
-![Matriz de evaluación de riesgo. Fuente: (Progressa Lean, 2020).](res/matriz.png)
+![Matriz de evaluación de riesgo. Fuente: (Progressa Lean, 2020).](res/matriz.png){width=9cm}
 
 Dicha matriz está basada en el análisis AMEF para la identificación de prioridad de fallos y defectos en una implementación. Una vez identificada y documentada la información mencionada, lo siguiente es la realización de una bitácora dentro de una reunión con las partes involucradas. En dicha bitácora, se destarán los responsables, las actividades, recursos y fechas de cumplimiento estimado. Posteriormente, se hará la comunicación del cambio y la bitácora, en la cual se informará a los colaboradores y partes interesadas el proceso y gestión del cambio, con la finalidad de que éstos estén enterados.
 
