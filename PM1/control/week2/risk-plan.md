@@ -7,6 +7,8 @@
    1. Riesgos Cualitativos
    
    2. Riesgos Cuantitativos
+
+    3. Matriz de Probabilidad e Impacto
    
 2. Protocolo de Respuesta al Riesgo
    
@@ -14,7 +16,7 @@
    
    2. Roles y responsabilidades
    
-   3. Clasificación de riesgos (priorizar hacer RBS)
+   3. Clasificación de riesgos (RBS)
    
 3. Control de Riesgos
    
@@ -63,13 +65,13 @@ Similar a la sección anterior, la tabla siguiente presenta el Registro de Riesg
 
 El protocolo de mitigación de riesgo se aplicará cuando, en el Sprint Planning, una Tarea lleve consigo alguno de los riesgos de las tablas anteriores y además **dicho riesgo se encuentre en áreas de prioridad**.Con el fin de establecer una guía general sobre las áreas de prioridad y qué riesgos previstos se encuentran ahí, se presenta la siguiente Matriz de Probabilidad e Impacto. En esta matriz, los riesgos que se encuentren en el área sin sobreado se clasifican como **de mínima acción**, y un protocolo de mitigación no sería necesario. En lugar del protocolo de mitigación, sólo será necesario **informar a los involucrados para su monitoreo**, pues son riesgos que con correcta atención se evitarían.
 
-![img]
+![Matriz de Probabilidad e Impacto](res/mtx.png)
 
 ## 2. Protocolo de Respuesta al Riesgo
 
 A continuación se presentan las estrategias principales para responder a los riesgos previstos en las dos secciones anteriores y que se encuentren en las áreas de prioridad de la sección 1.3. Dichas estrategias difieren según el tipo de riesgo (cualitativo o cuantitativo), por lo que se hará la distinción entre las estrategias a seguir en caso de riesgos previstos de tipo cualitativo y de tipo cuantitativo.
    
-### 1. Metodología de análisis y respuesta ante riesgos (según su tipo)
+### 2.1. Metodología de análisis y respuesta ante riesgos (según su tipo)
 
 **Riesgos Cualitativos: análisis y respuesta**
 
@@ -103,7 +105,7 @@ Donde:
   
 Una vez que se tenga esta nformación de las 4 causas (filas en la tabla), de acuerdo al NPR, las filas del AMEF se ordenan: hasta arriba será la fila de la causa más importante del riesgo.
 
-3. Una vez que se tengan las causas ordenadas de acuerdo al NPR en la Tabla AMEF, seguirá la toma de decisiones: por medio de una reunión o no, se realizarán **nuevas Tareas para el Sprint Backlog** que involucren las acciones preventivas a tomar **para la causa principal (primera fila del AMEF), y serán incluidas y priorizadas** dentro de dicho Sprint Backlog.
+3. Cuando se tengan las causas ordenadas de acuerdo al NPR en la Tabla AMEF, seguirá la toma de decisiones: por medio de una reunión o no, se realizarán **nuevas Tareas para el Sprint Backlog** que involucren las acciones preventivas a tomar **para la causa principal (primera fila del AMEF), y serán incluidas y priorizadas** dentro de dicho Sprint Backlog.
 
 **Riesgos Cuantitativos: análisis y respuesta**
 
@@ -127,7 +129,7 @@ De esta manera, el protocolo a seguir ante cualquier riesgo que sea parte de las
 
 ![Protocolos de análisis y respuesta a los dos tipos de riesgo](res/riesgos-overview.png)
    
-### 2. Roles, responsabilidades y costos
+### 2.2. Roles, responsabilidades y costos
 
 El equipo de cada departamento del proyecto asumirá ciertas responsabilidades, las cuales se plantean a continuación. A su vez, esta dedicación de tiempo por parte del equipo de trabajo representa un costo adicional al planteado por las actividades del protocolo mitigación de riesgos de la sección anterior, mismo que también se tratará al final de esta sección.
 
@@ -162,8 +164,18 @@ $$
 
 Nota: importante tratar de llevar a cabo el análisis y generación de Tareas de mitigación de riesgo en 3 días hábiles, a fin de no retrasar el Sprint.
    
-### 3. Clasificación de riesgos
+### 2.3. Clasificación de riesgos
 
 Los riesgos previstos en las tablas de la Sección 1.1 y 1.2 se clasificaron inicialmente por el tipo de análisis (cualitativo y cuantitativo). Ahora, con el fin de identificar los riesgos por sus fuentes, se clasifican utilizando una RBS (Risk Breakdown Structure), misma que es una estructura jerárquica de las posibles causas de los riesgos del proyecto.
 
 ![RBS de los riesgos previstos](res/rbs.png)
+
+## 3. Control de Riesgos
+   
+### 3.1. Implementación de respuesta al riesgo
+ 
+### 3.2. Monitoreo a riesgos identificados
+ 
+### 3.3. Identificar nuevos riesgos
+ 
+### 3.4. Evaluación de efectividad de respuesta al riesgo
