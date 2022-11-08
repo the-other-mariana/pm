@@ -173,9 +173,42 @@ Los riesgos previstos en las tablas de la Sección 1.1 y 1.2 se clasificaron ini
 ## 3. Control de Riesgos
    
 ### 3.1. Implementación de respuesta al riesgo
+
+La implementación de respuesta al riesgo es el proceso de implementar la alternativa acordaba al final de las reuniones después del análisis del riesgo: se trata de la implementación de las Tareas agregadas al Sprint Backlog por parte del riesgo analizado. El beneficio de este proceso es el llevar a cabo acciones que minimizen las amenazas y maximizen las oportunidades que el riesgo previsto representa. 
+
+El Scrum Team junto con el Project Manager, como se estipula en la Sección 2.2, deberán decidir los miembros del equipo que desarrollarán las Tareas de mitigación. Su implementación se dará como cualquier otra Tarea en el Sprint Backlog, pero además requiere de otras actividades. La implementación de estas nuevas Tareas de mitigación conlleva lo siguiente:
+
+- Antes de comenzar su implementación se debe asegurar que el cronograma, recursos y costo está contemplado en la línea base del proyecto. Para ello, durante el Dialy Scrum se debe informar que se está a punto de implementar una Tarea de mitigación, y el Project Manager se asegura que esto forma parte del plan.
+
+- Se debe llevar a cabo un Reporte de Riesgo, mismo que servirá para la evaluación del desempeño de la respuesta al riesgo. El Reporte de Riesgo es un documento con los resultados obtenidos después de la implementación, monitoreo y control de las Tareas de mitigación de un riesgo previsto. Estos resultados del reporte deben incluir: 
+  - Fecha, tiempo, recursos y efecto en el proyecto o Sprint. 
+  
+  - Si se realizan **Solicitudes de Cambio** como consecuencia a la implementación de una Tarea de mitigación, se deberá incluir en el Reporte de Riesgo, con el ID de la Solicitud de Cambio o SCCI (si se trata de cambios en los CIs).
  
 ### 3.2. Monitoreo a riesgos identificados
+
+Este proceso se encarga de monitoreo durante la implementación de las Tareas de mitigación acordadas, seguir de cerca las consecuencias y analizar posibles nuevos riesgos.
+
+El monitoreo se basa en la información registrada en el Reporte de Riesgo durante la implementación y la línea base del proyecto en cuanto a tiempo, recursos y costos.
+
+Para el monitoreo de la información del Reporte de Riesgo se recomienda:
+
+- Realizar un diagrama de control con el historial de las Soliclitudes de Cambio o SCCIs a lo largo del proyecto, donde se incluyan todas las Solicitudes de Cambio o SCCIs que se reportan como consecuencia del cambio implementado. Dicho diagrama de control tendrá **un límite de alerta**, ubicado a $2 \times \sigma$ del promedio de número de Solicitudes de Cambio $\overline{X}$ por semana. A continuación se presenta un ejemplo de gŕafico de control para analizar anomalías en la cantidad de cambios por consecuencia de Tareas de mitigación que fueron implementadas en las semanas marcadas en rojo. La línea de alerta, que se encuentra a $2\sigma$ del promedio de cambios, indica que las Tareas de mitigación implicaron una cantidad de cambios que deben ser monitoreados de cerca. 
+
+   ![Gráfico de Control para Monitoreo](res/grafico-control.png)
+
+- Una vez graficado el diagrama de control, de presentarse cantidades de Solicitudes de Cambios anormales (arriba del límite de alerta), se contactará al Departamento de Calidad para que se analice si dichas cantidades de cambios son normales o se está presentando **un nuevo riesgo** no previsto, ya que cantidades anormales de cambios podrían ser consecuencia de un problema latente que se tiene y se está buscando controlar con cambios, pero que sólo esta desencadenando más y más ajustes, lo que debe tratarse de una amenaza nueva.
  
-### 3.3. Identificar nuevos riesgos
- 
-### 3.4. Evaluación de efectividad de respuesta al riesgo
+### 3.3. Evaluación de efectividad de respuesta al riesgo
+
+La evaluación de la efectvidad de la respuesta al riesgo, implenetada y monitoreada de acuerdo a las secciones anteriores, se llevará a cabo mediante una auditoría al finalizar el Sprint. 
+
+- El Project Manager es el responsable de asegurarse de que las auditorías de riesgos se realicen con la misma frecuencia que los Sprint Review, e incluso puede incluir la auditoría dentro del mismo Review.
+
+- La auditoría será facilitada por el Director de Calidad, con los siguientes objetivos:
+
+  -  Comparar el **Valor Ganado de dicho Sprint con el Valor Ganado Planeado**, 
+  
+  -  Comparar el **Costo Real de dicho Sprint con el Costo Real Planeado**,
+
+   - Establecer si las implicaciones de recursos y tiempo para la mitigación del riesgo es menor que **la Severidad (S)** (en tabla AMEF realizada para dicho riesgo) del riesgo en el proyecto. Registrar dicha conclusión en el Reporte de Riesgo y en el riesgo correspondiente en el Registro de Riesgos de las secciones 1.1 y 1.2.
