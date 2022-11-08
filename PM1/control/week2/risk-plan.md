@@ -14,7 +14,7 @@
    
    1. Metodología de análisis de riesgos (según su tipo)
    
-   2. Roles y responsabilidades
+   2. Roles, responsabilidades y costos
    
    3. Clasificación de riesgos (RBS)
    
@@ -24,9 +24,9 @@
    
    2. Monitoreo a riesgos identificados
    
-   3. Identificar nuevos riesgos
-   
-   4. Evaluación de efectividad de respuesta al riesgo
+   3. Evaluación de efectividad de respuesta al riesgo
+
+https://es.slideshare.net/EmilianoGrande/plan-de-gestin-del-riesgo-77249033
 
 ## 1. Identificación de Riesgos
 
