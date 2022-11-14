@@ -8,7 +8,9 @@
    
    2. Riesgos Cuantitativos
 
-    3. Matriz de Probabilidad e Impacto
+   3. Matriz de Probabilidad e Impacto
+
+   4. Respuesta al Riesgo
    
 2. Protocolo de Respuesta al Riesgo
    
@@ -71,7 +73,7 @@ El protocolo de mitigación de riesgo se aplicará cuando, en el Sprint Planning
 
 ![Matriz de Probabilidad e Impacto](res/mtx.png)
 
-### 1.4 Respuesta al riesgo
+### 1.4 Respuesta al Riesgo
 
 En la siguiente tabla se muestran las repsuestas generales sugeridas desde la etapa de Planeación para los riesgos previstos en las secciones 1.1 y 1.2. En la sección que sigue se establece que, al ser sugerencias generales, tras la etapa de análisis para la mitigación de un riesgo previsto en un Sprint, se especificarán estas sugerencias u otras por completo en Tareas de mitigación detalladas y concretas dentro del Sprint Backlog.
 
@@ -93,7 +95,7 @@ En la siguiente tabla se muestran las repsuestas generales sugeridas desde la et
 | 14 | Falta de personal | |
 | 15 | Falta de presupuesto | |
 
-*La estimación del costo para las respuestas al riesgo de esta tabla estarán disponibles hasta la etapa de análisis cualitativo o cuantitativo de cada riesgo cuando se de el Sprint Planning correspondiente, y se conocerá como **Costo Neto del Riesgo**. Dicho costo se calculará siguiendo la fórmula de la Sección 2.2.
+*La estimación del costo para las respuestas al riesgo de esta tabla estarán disponibles hasta la etapa de análisis cualitativo o cuantitativo de cada riesgo cuando se de el Sprint Planning correspondiente, y se conocerá como **Costo Neto del Riesgo**. Dicho costo se calcula siguiendo la fórmula de la Sección 2.2.
 
 ## 2. Protocolo de Respuesta al Riesgo
 
