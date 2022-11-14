@@ -174,7 +174,7 @@ De esta manera, en NPV determinará los recursos monetarios que representa la mi
 5. Una vez que se decide cuál ramificación de actividades realizar, cada nodo se convertirá en una Tarea para el Sprint Backlog del sprint que se busca iniciar. **Las probabilidades serán del 100%** para los nodos de la rama elegida, y **0% para cualquier otro nodo**. De esta manera, **el NPV de la rama elegida será la suma de las inversiones de cada nodo**:
 
 $$
-NPV = \sum^{N}_{i = 1}{inv_{i}}
+NPV = \sum^{N}{inv_{i}}
 $$
 
 De esta forma, el protocolo a seguir ante cualquier riesgo que sea parte de las Tareas en un Sprint y se prevee en el Sprint Planning, generará nuevas Tareas de respuesta/preventivas al riesgo de la siguiente manera:
