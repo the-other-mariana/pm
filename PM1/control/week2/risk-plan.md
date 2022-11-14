@@ -148,7 +148,7 @@ $$
 para así:
 
 $$
-NPV = \sum^{N}_{i = 1}{inv_{i}}
+NPV = \sum^{N}{inv_{i}}
 $$
 
 donde $N$ representa la cantidad de Tareas nuevas a implementar como respuesta o mitigación al riesgo. *20 divide al salario mensual para calcular el salario por día, ya que 5 días hábiles por 4 semanas resulta en 20.
