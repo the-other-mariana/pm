@@ -28,9 +28,13 @@
 
 https://es.slideshare.net/EmilianoGrande/plan-de-gestin-del-riesgo-77249033
 
+## Introducción
+
+El siguiente documento constituye el Plan de Gestión de Riesgos para el proyecto, mismo que describe cómo se estructuran y se llevan a cabo actividades de gestión de riesgos. Este plan contiene la descripción de la forma en que se abordan los riesgos y las herramientas para llevarlo a cabo, además de las fuentes de información que se utilizarán para gestionar dichos riesgos. Adicionalmente, establece los roles y responsabilidades durante los distintos tipos de actividades requeridas, delimita cómo calcular el costo de un riesgo y provee una lista de los riesgos previstos, así como su clasificación.
+
 ## 1. Identificación de Riesgos
 
-En este apartado se presentará un Registro de Riesgos para riesgos cualitativos y otro para riesgos cuantitativos. En cada uno de estos Registros de Riesgos, se presenta cada riesgo con un identificador único,  descripción con el nivel de detalle necesario para evitar ambigüedad, dueños potenciales del riesgo (Risk Owners) y principales causas del riesgo.
+En este apartado se presentará un Registro de Riesgos para riesgos cualitativos y otro para riesgos cuantitativos. En cada uno de estos Registros de Riesgos, se presenta cada riesgo con un identificador único,  una descripción con el nivel de detalle necesario para evitar ambigüedad, los dueños potenciales del riesgo (Risk Owners) y principales causas del riesgo.
 
 ### 1.1 Riesgos Cualitativos
 
@@ -63,13 +67,41 @@ Similar a la sección anterior, la tabla siguiente presenta el Registro de Riesg
 
 ### 1.3 Matriz de Probabilidad e Impacto
 
-El protocolo de mitigación de riesgo se aplicará cuando, en el Sprint Planning, una Tarea lleve consigo alguno de los riesgos de las tablas anteriores y además **dicho riesgo se encuentre en áreas de prioridad**.Con el fin de establecer una guía general sobre las áreas de prioridad y qué riesgos previstos se encuentran ahí, se presenta la siguiente Matriz de Probabilidad e Impacto. En esta matriz, los riesgos que se encuentren en el área sin sobreado se clasifican como **de mínima acción**, y un protocolo de mitigación no sería necesario. En lugar del protocolo de mitigación, sólo será necesario **informar a los involucrados para su monitoreo**, pues son riesgos que con correcta atención se evitarían.
+El protocolo de mitigación de riesgo se aplicará cuando, en el Sprint Planning, una Tarea lleve consigo alguno de los riesgos de las tablas anteriores y además **dicho riesgo se encuentre en áreas de prioridad**. Con el fin de establecer una guía general sobre las áreas de prioridad y qué riesgos previstos se encuentran ahí, se presenta la siguiente Matriz de Probabilidad e Impacto. En esta matriz, los riesgos que se encuentren en el área sin sobreado se clasifican como **de mínima acción**, y un protocolo de mitigación no sería necesario. En lugar del protocolo de mitigación, sólo será necesario **informar a los involucrados para su monitoreo**, pues son riesgos que con correcta atención se evitarían. A su vez, los riesgos que se encuntran en áreas sombreadas de cualquier tono, se encuentran en **áreas de prioridad**, por lo que la aplicación del protocolo de mitigación/respuesta al riesgos es necesaria.
 
 ![Matriz de Probabilidad e Impacto](res/mtx.png)
 
+### 1.4 Respuesta al riesgo
+
+En la siguiente tabla se muestran las repsuestas generales sugeridas desde la etapa de Planeación para los riesgos previstos en las secciones 1.1 y 1.2. En la sección que sigue se establece que, al ser sugerencias generales, tras la etapa de análisis para la mitigación de un riesgo previsto en un Sprint, se especificarán estas sugerencias u otras por completo en Tareas de mitigación detalladas y concretas dentro del Sprint Backlog.
+
+| ID | Riesgo | Respuestas Preventivas | Respuestas Correctivas | 
+| --- | --- | --- | --- |
+| 1 | Actualización de buscador (browser) | Monitorear anuncios de Google Chrome y Firefox, documentar la versión actual después de cada día de desarrollo. | Regresar a la última versión documentada donde las funcionalidades no sufrían cambios. | 
+| 2 | Complicaciones de implementación | Heredar tareas de menor prioridad a otro Sprint para dedicar el presente Sprint a la implementación de tareas complejas. | Atacar problemas con otras alternativas de programación, proponer soluciones y citar al socio fundador para la elección de la solución alternativa. |
+| 3 | Exceso de cambios |  |
+| 4 | Pérdida de archivos de diseño | |
+| 5 | Interrupción del presupuesto | |
+| 6 | Aplicación similar sale antes | |
+| 7 | Nuevas leyes de privacidad | |
+| 8 | Pérdida de datos en tests | Generar un ambiente de desarrollo para QA (Quality Assurance) donde se utilice **una copia** de la base datos de producción, mas no la misma. Documentar el link para la conexión a la base datos del ambiente en el que se trabaja. | Crear otra copia de la base de datos de producción para QA, a fin de desechar la base de datos de QA con pérdidas. | 
+| 9 | Demandas del equipo | |
+| 10 | Sistema es lento | Al implementar funcionalidades, realizar un análisis y reportar la Complejidad Computacional de lo implementado, utilizando notación *Big O*. Cuestionar la implementación si una complejidad es igual o mayor a $O(n^3)$. | Analizar secciones del código con bucles y buscar rediseñar el uso de memoria RAM o ciclos para reducir aquellas complejidades $O(n^3)$ o superiores. Reimplementar con dichos cambios. |
+| 11 | Almacenamiento excedido repentinamente | Al iniciar un nuevo día de implementación, checar si los *logs* del clúster de datos adquirido muestra advertencias de espacio, a fin de evitar cobros inesperados por exceder de espacio. | Analizar *controllers* que manipulan la base de datos a fin de encontrar errores que están saturando la base datos. Si los datos son correctos, habrá que contratar más almacenamiento. |
+| 12 | Renuncias del equipo | | 
+| 13 | Despidos del equipo | |
+| 14 | Falta de personal | |
+| 15 | Falta de presupuesto | |
+
 ## 2. Protocolo de Respuesta al Riesgo
 
-A continuación se presentan las estrategias principales para responder a los riesgos previstos en las dos secciones anteriores y que se encuentren en las áreas de prioridad de la sección 1.3. Dichas estrategias difieren según el tipo de riesgo (cualitativo o cuantitativo), por lo que se hará la distinción entre las estrategias a seguir en caso de riesgos previstos de tipo cualitativo y de tipo cuantitativo.
+A continuación se presentan las estrategias principales para responder a los riesgos previstos en las dos secciones anteriores y que se encuentren en las áreas de prioridad de la Sección 1.3. Dichas estrategias difieren según el tipo de riesgo (cualitativo o cuantitativo), por lo que se hará la distinción entre las estrategias a seguir en caso de riesgos previstos de tipo cualitativo y de tipo cuantitativo. Sin embargo, ambas estrategias llevan a cabo las siguientes fases generales:
+
+- Análisis: se requiere una etapa de análisis una vez que se determina en el Sprint Planning que una tarea del presente Sprint conlleva algún riesgo de las secciones 1.1 y 1.2. En esta etapa se busca identificar las causas de dicho riesgo
+
+- Respuesta: una vez conducida la etapa de análisis de causas del riesgo, el equipo está listo para proponer actividades de respuesta al riesgo. En esta etapa se busca que el equipo identifique y documente la respuesta más conveniente.
+
+Debido a la cantidad de riesgos que se preveen en el proyecto según las secciones 1.1 y 1.2, resulta poco conveniente establecer en este Plan las causas explícitas de cada riesgo, así como las respuestas a dichos riesgos. Adicionalmente, la naturaleza del presente proyecto de software sugiere que un análisis exhaustivo y una propuesta de respuestas por cada riesgo previsto se pueden establecer una vez que el proyecto está en marcha, y no durante este Plan. Por lo tanto, en las siguientes secciones, se presenta el protocolo general (aunque detallado) a seguir en caso de identificar un riesgo previsto o nuevo en el Sprint Planning.
    
 ### 2.1. Metodología de análisis y respuesta ante riesgos (según su tipo)
 
@@ -79,7 +111,7 @@ En cuanto al análisis de cada riesgo cualitativo previsto en la tabla de la Sec
 
 1. Análisis de causa y efecto
    
-La etapa de análisis de un riesgo cualitativo comienza con un diagrama de causa y efecto (de pescado), a fin de identificar máximo **4 causas principales de tal riesgo (efecto)**, donde cada una de estas 4 causas tendrá **1 subcausa principal**. Dicho diagrama se comienza con el riesgo o amenaza, y se exploran las prosibles causas que llevarían a que dicho riesgo ocurra. El diagrama seguirá el siguiente formato:
+La etapa de análisis de un riesgo cualitativo comienza con un diagrama de causa y efecto (de pescado), a fin de identificar máximo **4 causas principales de tal riesgo (efecto)**, donde cada una de estas 4 causas tendrá **1 subcausa principal**. Dicho diagrama se comienza con el riesgo o amenaza, y se exploran las posibles causas que llevarían a que dicho riesgo ocurra. El diagrama seguirá el siguiente formato:
 
 ![Diagrama de causa-efecto](res/diagramas-riesgos.png)
 
@@ -105,7 +137,23 @@ Donde:
   
 Una vez que se tenga esta nformación de las 4 causas (filas en la tabla), de acuerdo al NPR, las filas del AMEF se ordenan: hasta arriba será la fila de la causa más importante del riesgo.
 
-3. Cuando se tengan las causas ordenadas de acuerdo al NPR en la Tabla AMEF, seguirá la toma de decisiones: por medio de una reunión o no, se realizarán **nuevas Tareas para el Sprint Backlog** que involucren las acciones preventivas a tomar **para la causa principal (primera fila del AMEF), y serán incluidas y priorizadas** dentro de dicho Sprint Backlog.
+3. Cuando se tengan las causas ordenadas de acuerdo al NPR en la Tabla AMEF, seguirá la toma de decisiones: por medio de una reunión o no, se realizarán **nuevas Tareas para el Sprint Backlog** que involucren las acciones preventivas a tomar **para la causa principal (primera fila del AMEF), y serán incluidas y priorizadas** dentro de dicho Sprint Backlog. A su vez deberá incluir, cada una de estas nuevas Tareas, el **tiempo y personal requerido**.
+
+4. El NPV (Net Path Value), descrito en la sección siguiente con mayor detalle, se deberá calcular una vez que se establecieron las Tareas de mitigación del punto anterior. El NPV en el caso de riesgos cualitativos es la suma de las inversiones necesarias por cada tarea nueva. La inversión de cada tarea se calcula de la siguiente manera:
+
+$$
+inv_i = \left[ \left( \hbox{días} \times \frac{\hbox{sueldo mensual}}{20^*} \right) \times \hbox{personas} \right] + \hbox{adquisiciones}
+$$
+
+para así:
+
+$$
+NPV = \sum^{N}_{i = 1}{inv_{i}}
+$$
+
+donde $N$ representa la cantidad de Tareas nuevas a implementar como respuesta o mitigación al riesgo. *20 divide al salario mensual para calcular el salario por día, ya que 5 días hábiles por 4 semanas resulta en 20.
+
+De esta manera, en NPV determinará los recursos monetarios que representa la mitigación del riesgo en cuestión, dados el tiempo y personas especificadas al incluir cada Tarea en el Sprint Backlog.
 
 **Riesgos Cuantitativos: análisis y respuesta**
 
@@ -117,15 +165,19 @@ Una vez que se tenga esta nformación de las 4 causas (filas en la tabla), de ac
 
 ![Árbol de Decisión con Inversión por nodo.](res/arbol2.png)
 
-3. Se calcula el NPV (Net Path Value), que es costo de cada rama hasta su final, donde el costo es la suma de las multiplicaciones de Inversión por probabilidad. Así, se obtiene **la cantidad de dinero gastado involucrado por rama de poisibilidad del riesgo**, con el fin de facilitar la decisión al mostrar lo que compromete cada camino de decisión.
+1. Se calcula el NPV (Net Path Value), que es costo de cada rama hasta su final, donde el costo es la suma de las multiplicaciones de Inversión por probabilidad. Así, se obtiene **la cantidad de dinero involucrado por rama de posibilidad del riesgo**, con el fin de facilitar la decisión al mostrar lo que compromete cada camino de decisión.
 
 ![Árbol de Decisión con NPV](res/arbol3.png)
 
-4. Se decide cuál ramificación de decisiones se hará por medio de una reunión.
+4. Se decide cuál ramificación de decisiones se llevará a cabo por medio de una reunión.
 
-5. Una vez que se decide cuál ramificación de actividades realizar, cada nodo se convertirá en una Tarea para el Sprint Backlog del sprint que se busca iniciar.
+5. Una vez que se decide cuál ramificación de actividades realizar, cada nodo se convertirá en una Tarea para el Sprint Backlog del sprint que se busca iniciar. **Las probabilidades serán del 100%** para los nodos de la rama elegida, y **0% para cualquier otro nodo**. De esta manera, **el NPV de la rama elegida será la suma de las inversiones de cada nodo**:
 
-De esta manera, el protocolo a seguir ante cualquier riesgo que sea parte de las Tareas en un Sprint y se prevee en el Sprint Planning, generará nuevas Tareas de respuesta/preventivas al riesgo de la siguiente manera:
+$$
+NPV = \sum^{N}_{i = 1}{inv_{i}}
+$$
+
+De esta forma, el protocolo a seguir ante cualquier riesgo que sea parte de las Tareas en un Sprint y se prevee en el Sprint Planning, generará nuevas Tareas de respuesta/preventivas al riesgo de la siguiente manera:
 
 ![Protocolos de análisis y respuesta a los dos tipos de riesgo](res/riesgos-overview.png)
    
@@ -135,38 +187,49 @@ El equipo de cada departamento del proyecto asumirá ciertas responsabilidades, 
 
 Las responsabilidades ante la presencia de algún riesgo en las Tareas de un Sprint son:
 
-- El Project Manager debe conducir la reunión del Sprint Planning, donde se debe identificar si el Sprint siguiente contiene alguna actividad de riesgo previsto y de prioridad. De ser así, se prosigue con los siguientes puntos.
+- El **Project Manager** debe conducir la reunión del Sprint Planning, donde se debe identificar si el Sprint siguiente contiene alguna actividad de riesgo previsto y de prioridad. De ser así, se prosigue con los siguientes puntos.
 
-- En las tablas de las secciones 1.1 y 1.2 se provee de un **Risk Owner**, que es el departamento directamente involucrado en el riesgo previsto. Dicho departamento tiene la responsabilidad de **convocar una reunión** para realizar los formatos de análisis del riesgo: el diagrama de pescado (en riesgos cualitativos) y el diagrama de árbol (en riesgos cuantitativos).
+- En las tablas de las secciones 1.1 y 1.2 se provee de un **Risk Owner**, que es el departamento directamente involucrado en el riesgo previsto. Dicho departamento tiene la responsabilidad de **convocar una reunión** para realizar los formatos de **análisis del riesgo**: el diagrama de pescado (en riesgos cualitativos) y el diagrama de árbol (en riesgos cuantitativos).
 
 - De tratarse de riesgo cuantitativo, el departamento **Risk Owner** también es responsable de invitar a dicha reunión al líder de finanzas.
 
-- Una vez completado el análisis, el líder del departamento es responsable de decidir si convocar una reunión para la creación de tickets de Tareas para el Sprint Backlog.
+- Una vez completado el análisis, el **líder del departamento** es responsable de **decidir si convocar una reunión** para la creación de tickets de Tareas para el Sprint Backlog junto con el **Scrum Team y el Scrum Master**, o si sólo el **Scrum Master** es capaz de **establecer y estimar los tickets de Tareas de mitigación**. Estos tickets deberán contener la estimación de tiempo en días y la cantidad de personal involucrado.
   
-- El Project Manager es responsable de introducir y priorizar en el Sprint Backlog dichas Tareas de mitigación de riesgo generada.
+- El **Project Manager** es responsable de **introducir y priorizar** en el Sprint Backlog dichas Tareas de mitigación de riesgo generadas y estimadas, además de pasar **la información de inversión requerida** para dichas Tareas al **departamento de finanzas**.
 
-- Una vez en el Sprint Backlog, las Tareas de mitigación de riesgo se dividen entre el Scrum Team y se implementan en el Sprint.
+- Una vez en el Sprint Backlog, **las Tareas de mitigación de riesgo se dividen entre el Scrum Team y se implementan** en el Sprint.
 
 Los costos involucrados en la planeación y análisis **que dura 3 días como máximo** de riesgos son calculados de la siguiente manera:
 
 $$
-\hbox{Costo Total del Riesgo \#13} = NPV_{decisión} + \hbox{Costo del esfuezo},
-\newline \hbox{Costo del esfuerzo} = P \times Sueldo \times \frac{3}{\hbox{días hábiles por mes}}
+\hbox{Costo de planeación} = P \times Sueldo \times \frac{3}{\hbox{días hábiles por mes}}
 $$
 
 donde:
 
 $$
-\newline \hbox{días hábiles por mes} = 20,
-\newline P = \hbox{personas involucradas},
-\newline Sueldo = \hbox{sueldo mensual}
+\hbox{días hábiles por mes} = 20,
+$$
+
+$$
+P = \hbox{personas involucradas},
+$$
+
+$$
+Sueldo = \hbox{sueldo mensual}
+$$
+
+para así sumar dichos costos al NPV:
+
+$$
+\hbox{Costo Neto del Riesgo} = NPV_{decisión} + \hbox{Costo de planeación}
 $$
 
 Nota: importante tratar de llevar a cabo el análisis y generación de Tareas de mitigación de riesgo en 3 días hábiles, a fin de no retrasar el Sprint.
    
 ### 2.3. Clasificación de riesgos
 
-Los riesgos previstos en las tablas de la Sección 1.1 y 1.2 se clasificaron inicialmente por el tipo de análisis (cualitativo y cuantitativo). Ahora, con el fin de identificar los riesgos por sus fuentes, se clasifican utilizando una RBS (Risk Breakdown Structure), misma que es una estructura jerárquica de las posibles causas de los riesgos del proyecto.
+Los riesgos previstos en las tablas de la Sección 1.1 y 1.2 se clasificaron inicialmente por el tipo de análisis (cualitativo y cuantitativo) necesario para establecer una respuesta. Ahora, con el fin de identificar los riesgos por sus fuentes, se clasifican utilizando una RBS (Risk Breakdown Structure), misma que es una estructura jerárquica de las posibles causas de los riesgos del proyecto.
 
 ![RBS de los riesgos previstos](res/rbs.png)
 
@@ -176,32 +239,33 @@ Los riesgos previstos en las tablas de la Sección 1.1 y 1.2 se clasificaron ini
 
 La implementación de respuesta al riesgo es el proceso de implementar la alternativa acordaba al final de las reuniones después del análisis del riesgo: se trata de la implementación de las Tareas agregadas al Sprint Backlog por parte del riesgo analizado. El beneficio de este proceso es el llevar a cabo acciones que minimizen las amenazas y maximizen las oportunidades que el riesgo previsto representa. 
 
-El Scrum Team junto con el Project Manager, como se estipula en la Sección 2.2, deberán decidir los miembros del equipo que desarrollarán las Tareas de mitigación. Su implementación se dará como cualquier otra Tarea en el Sprint Backlog, pero además requiere de otras actividades. La implementación de estas nuevas Tareas de mitigación conlleva lo siguiente:
+El Scrum Team junto con el Scrum Master, como se estipula en la Sección 2.2, deberán decidir los miembros del equipo que desarrollarán las Tareas de mitigación. Su implementación se dará como cualquier otra Tarea en el Sprint Backlog, pero además requiere de otras actividades. La implementación de estas nuevas Tareas de mitigación conlleva lo siguiente:
 
-- Antes de comenzar su implementación se debe asegurar que el cronograma, recursos y costo está contemplado en la línea base del proyecto. Para ello, durante el Dialy Scrum se debe informar que se está a punto de implementar una Tarea de mitigación, y el Project Manager se asegura que esto forma parte del plan.
+- Antes de comenzar su implementación se debe asegurar que el cronograma, recursos y Costo Neto del Riesgo está contemplado en la línea base del proyecto. Para ello, durante el Daily Scrum se debe informar que se está a punto de implementar una Tarea de mitigación, y el Project Manager se asegura que esto forma parte del plan.
 
 - Se debe llevar a cabo un Reporte de Riesgo, mismo que servirá para la evaluación del desempeño de la respuesta al riesgo. El Reporte de Riesgo es un documento con los resultados obtenidos después de la implementación, monitoreo y control de las Tareas de mitigación de un riesgo previsto. Estos resultados del reporte deben incluir: 
+  
   - Fecha, tiempo, recursos y efecto en el proyecto o Sprint. 
   
-  - Si se realizan **Solicitudes de Cambio** como consecuencia a la implementación de una Tarea de mitigación, se deberá incluir en el Reporte de Riesgo, con el ID de la Solicitud de Cambio o SCCI (si se trata de cambios en los CIs).
+  - Si se realizan **Solicitudes de Cambio** como consecuencia a la implementación de una Tarea de mitigación, se deberán incluir como listado en el Reporte de Riesgo, con el ID de la Solicitud de Cambio o SCCI (si se trata de cambios en los CIs).
  
 ### 3.2. Monitoreo a riesgos identificados
 
-Este proceso se encarga de monitoreo durante la implementación de las Tareas de mitigación acordadas, seguir de cerca las consecuencias y analizar posibles nuevos riesgos.
+Este proceso se encarga del monitoreo durante la implementación de las Tareas de mitigación acordadas, seguir de cerca las consecuencias y analizar posibles nuevos riesgos.
 
 El monitoreo se basa en la información registrada en el Reporte de Riesgo durante la implementación y la línea base del proyecto en cuanto a tiempo, recursos y costos.
 
 Para el monitoreo de la información del Reporte de Riesgo se recomienda:
 
-- Realizar un diagrama de control con el historial de las Soliclitudes de Cambio o SCCIs a lo largo del proyecto, donde se incluyan todas las Solicitudes de Cambio o SCCIs que se reportan como consecuencia del cambio implementado. Dicho diagrama de control tendrá **un límite de alerta**, ubicado a $2 \times \sigma$ del promedio de número de Solicitudes de Cambio $\overline{X}$ por semana. A continuación se presenta un ejemplo de gŕafico de control para analizar anomalías en la cantidad de cambios por consecuencia de Tareas de mitigación que fueron implementadas en las semanas marcadas en rojo. La línea de alerta, que se encuentra a $2\sigma$ del promedio de cambios, indica que las Tareas de mitigación implicaron una cantidad de cambios que deben ser monitoreados de cerca. 
+- Realizar un diagrama de control con el historial de las Solicitudes de Cambio o SCCIs a lo largo del proyecto, donde se analizan el número de las Solicitudes de Cambio o SCCIs que se reportan como consecuencia del cambio implementado. Dicho diagrama de control tendrá **un límite de alerta**, ubicado a $2 \times \sigma$ del promedio de número de Solicitudes de Cambio $\overline{X}$ por semana. A continuación se presenta un ejemplo de gŕafico de control para analizar anomalías en la cantidad de cambios por consecuencia de Tareas de mitigación que fueron implementadas en las semanas marcadas en rojo. La línea de alerta, que se encuentra a $2\sigma$ del promedio de cambios, indica que las Tareas de mitigación implicaron una cantidad de cambios que deben ser supervisados de cerca. 
 
    ![Gráfico de Control para Monitoreo](res/grafico-control.png)
 
-- Una vez graficado el diagrama de control, de presentarse cantidades de Solicitudes de Cambios anormales (arriba del límite de alerta), se contactará al Departamento de Calidad para que se analice si dichas cantidades de cambios son normales o se está presentando **un nuevo riesgo** no previsto, ya que cantidades anormales de cambios podrían ser consecuencia de un problema latente que se tiene y se está buscando controlar con cambios, pero que sólo esta desencadenando más y más ajustes, lo que debe tratarse de una amenaza nueva.
+- Una vez graficado el diagrama de control, de presentarse cantidades de Solicitudes de Cambios anormales (arriba del límite de alerta), se contactará al Departamento de Calidad para que se analice si dichas cantidades de cambios para la mitigación son normales o se está presentando **un nuevo riesgo** no previsto consecuente al riesgo mitigado, ya que cantidades anormales de cambios podrían ser consecuencia de un problema latente que se tiene y se está buscando controlar con cambios, pero que sólo esta desencadenando más y más ajustes, lo que debe tratarse de una amenaza nueva.
  
 ### 3.3. Evaluación de efectividad de respuesta al riesgo
 
-La evaluación de la efectvidad de la respuesta al riesgo, implenetada y monitoreada de acuerdo a las secciones anteriores, se llevará a cabo mediante una auditoría al finalizar el Sprint. 
+La evaluación de la efectvidad de la respuesta al riesgo, implementada y monitoreada de acuerdo a las secciones anteriores, se llevará a cabo mediante una auditoría al finalizar el Sprint. 
 
 - El Project Manager es el responsable de asegurarse de que las auditorías de riesgos se realicen con la misma frecuencia que los Sprint Review, e incluso puede incluir la auditoría dentro del mismo Review.
 
@@ -211,4 +275,4 @@ La evaluación de la efectvidad de la respuesta al riesgo, implenetada y monitor
   
   -  Comparar el **Costo Real de dicho Sprint con el Costo Real Planeado**,
 
-   - Establecer si las implicaciones de recursos y tiempo para la mitigación del riesgo es menor que **la Severidad (S)** (en tabla AMEF realizada para dicho riesgo) del riesgo en el proyecto. Registrar dicha conclusión en el Reporte de Riesgo y en el riesgo correspondiente en el Registro de Riesgos de las secciones 1.1 y 1.2.
+   - Establecer si las implicaciones de recursos y tiempo para la mitigación del riesgo es menor que **la Severidad (S)** (en tabla AMEF realizada para dicho riesgo) del riesgo en el proyecto: si es menor la mitigación que la severidad, quiere decir que las acciones han valido la pena. Registrar dicha conclusión en el Reporte de Riesgo y en el riesgo correspondiente dentro del Registro de Riesgos de las secciones 1.1 y 1.2.
