@@ -75,33 +75,35 @@ El protocolo de mitigación de riesgo se aplicará cuando, en el Sprint Planning
 
 En la siguiente tabla se muestran las repsuestas generales sugeridas desde la etapa de Planeación para los riesgos previstos en las secciones 1.1 y 1.2. En la sección que sigue se establece que, al ser sugerencias generales, tras la etapa de análisis para la mitigación de un riesgo previsto en un Sprint, se especificarán estas sugerencias u otras por completo en Tareas de mitigación detalladas y concretas dentro del Sprint Backlog.
 
-| ID | Riesgo | Respuestas Preventivas | Respuestas Correctivas | 
-| --- | --- | --- | --- |
-| 1 | Actualización de buscador (browser) | Monitorear anuncios de Google Chrome y Firefox, documentar la versión actual después de cada día de desarrollo. | Regresar a la última versión documentada donde las funcionalidades no sufrían cambios. | 
-| 2 | Complicaciones de implementación | Heredar tareas de menor prioridad a otro Sprint para dedicar el presente Sprint a la implementación de tareas complejas. | Atacar problemas con otras alternativas de programación, proponer soluciones y citar al socio fundador para la elección de la solución alternativa. |
-| 3 | Exceso de cambios |  |
-| 4 | Pérdida de archivos de diseño | |
-| 5 | Interrupción del presupuesto | |
-| 6 | Aplicación similar sale antes | |
-| 7 | Nuevas leyes de privacidad | |
-| 8 | Pérdida de datos en tests | Generar un ambiente de desarrollo para QA (Quality Assurance) donde se utilice **una copia** de la base datos de producción, mas no la misma. Documentar el link para la conexión a la base datos del ambiente en el que se trabaja. | Crear otra copia de la base de datos de producción para QA, a fin de desechar la base de datos de QA con pérdidas. | 
+| ID | Riesgo | Respuestas Preventivas | Respuestas Correctivas | Estimación: tiempo y personas* |
+| --- | --- | --- | --- | --- |
+| 1 | Actualización de buscador (browser) | Monitorear anuncios de Google Chrome y Firefox, documentar la versión actual después de cada día de desarrollo. | Regresar a la última versión documentada donde las funcionalidades no sufrían cambios. | 1 día, Equipo IT
+| 2 | Complicaciones de implementación | Heredar tareas de menor prioridad a otro Sprint para dedicar el presente Sprint a la implementación de tareas complejas. | Atacar problemas con otras alternativas de programación, proponer soluciones y citar al socio fundador para la elección de la solución alternativa. | 1 Sprint (15 d), Equipo IT + Calidad |
+| 3 | Exceso de cambios |  |  |  |
+| 4 | Pérdida de archivos de diseño | |  |  |
+| 5 | Interrupción del presupuesto | |  |  |
+| 6 | Aplicación similar sale antes | |  |  |
+| 7 | Nuevas leyes de privacidad | |  |  |
+| 8 | Pérdida de datos en tests | Generar un ambiente de desarrollo para QA (Quality Assurance) donde se utilice **una copia** de la base datos de producción, mas no la misma. Documentar el link para la conexión a la base datos del ambiente en el que se trabaja. | Crear otra copia de la base de datos de producción para QA, a fin de desechar la base de datos de QA con pérdidas. | 1 día, Equipo IT |
 | 9 | Demandas del equipo | |
-| 10 | Sistema es lento | Al implementar funcionalidades, realizar un análisis y reportar la Complejidad Computacional de lo implementado, utilizando notación *Big O*. Cuestionar la implementación si una complejidad es igual o mayor a $O(n^3)$. | Analizar secciones del código con bucles y buscar rediseñar el uso de memoria RAM o ciclos para reducir aquellas complejidades $O(n^3)$ o superiores. Reimplementar con dichos cambios. |
-| 11 | Almacenamiento excedido repentinamente | Al iniciar un nuevo día de implementación, checar si los *logs* del clúster de datos adquirido muestra advertencias de espacio, a fin de evitar cobros inesperados por exceder de espacio. | Analizar *controllers* que manipulan la base de datos a fin de encontrar errores que están saturando la base datos. Si los datos son correctos, habrá que contratar más almacenamiento. |
+| 10 | Sistema es lento | Al implementar funcionalidades, realizar un análisis y reportar la Complejidad Computacional de lo implementado, utilizando notación *Big O*. Cuestionar la implementación si una complejidad es igual o mayor a $O(n^3)$. | Analizar secciones del código con bucles y buscar rediseñar el uso de memoria RAM o ciclos para reducir aquellas complejidades $O(n^3)$ o superiores. Reimplementar con dichos cambios. | 2-3 días, Equipo Calidad
+| 11 | Almacenamiento excedido repentinamente | Al iniciar un nuevo día de implementación, checar si los *logs* del clúster de datos adquirido muestra advertencias de espacio, a fin de evitar cobros inesperados por exceder de espacio. | Analizar *controllers* que manipulan la base de datos a fin de encontrar errores que están saturando la base datos. Si los datos son correctos, habrá que contratar más almacenamiento. | 1-2 días, Equipo IT |
 | 12 | Renuncias del equipo | | 
 | 13 | Despidos del equipo | |
 | 14 | Falta de personal | |
 | 15 | Falta de presupuesto | |
 
+*La estimación del costo para las respuestas al riesgo de esta tabla estarán disponibles hasta la etapa de análisis cualitativo o cuantitativo de cada riesgo cuando se de el Sprint Planning correspondiente, y se conocerá como **Costo Neto del Riesgo**. Dicho costo se calculará siguiendo la fórmula de la Sección 2.2.
+
 ## 2. Protocolo de Respuesta al Riesgo
 
 A continuación se presentan las estrategias principales para responder a los riesgos previstos en las dos secciones anteriores y que se encuentren en las áreas de prioridad de la Sección 1.3. Dichas estrategias difieren según el tipo de riesgo (cualitativo o cuantitativo), por lo que se hará la distinción entre las estrategias a seguir en caso de riesgos previstos de tipo cualitativo y de tipo cuantitativo. Sin embargo, ambas estrategias llevan a cabo las siguientes fases generales:
 
-- Análisis: se requiere una etapa de análisis una vez que se determina en el Sprint Planning que una tarea del presente Sprint conlleva algún riesgo de las secciones 1.1 y 1.2. En esta etapa se busca identificar las causas de dicho riesgo
+- Análisis: se requiere una etapa de análisis una vez que se determina en el Sprint Planning que una tarea del presente Sprint conlleva algún riesgo de las secciones 1.1 y 1.2. En esta etapa se busca identificar las causas de dicho riesgo.
 
-- Respuesta: una vez conducida la etapa de análisis de causas del riesgo, el equipo está listo para proponer actividades de respuesta al riesgo. En esta etapa se busca que el equipo identifique y documente la respuesta más conveniente.
+- Respuesta: una vez conducida la etapa de análisis de causas del riesgo, el equipo está listo para proponer actividades de respuesta al riesgo, ya sean nuevas o tomando en cuenta las sugerencias de la Sección 1.4. En esta etapa se busca que el equipo identifique y documente la respuesta más conveniente.
 
-Debido a la cantidad de riesgos que se preveen en el proyecto según las secciones 1.1 y 1.2, resulta poco conveniente establecer en este Plan las causas explícitas de cada riesgo, así como las respuestas a dichos riesgos. Adicionalmente, la naturaleza del presente proyecto de software sugiere que un análisis exhaustivo y una propuesta de respuestas por cada riesgo previsto se pueden establecer una vez que el proyecto está en marcha, y no durante este Plan. Por lo tanto, en las siguientes secciones, se presenta el protocolo general (aunque detallado) a seguir en caso de identificar un riesgo previsto o nuevo en el Sprint Planning.
+Debido a la cantidad de riesgos que se preveen en el proyecto según las secciones 1.1 y 1.2, resulta poco conveniente establecer en este Plan las causas explícitas de cada riesgo, así como las respuestas a dichos riesgos con mayor detalle que la Sección 1.4. Adicionalmente, la naturaleza del presente proyecto ágil de software sugiere que un análisis exhaustivo y una propuesta de respuestas por cada riesgo previsto se pueden establecer una vez que el proyecto está en marcha, y no durante este Plan. Por lo tanto, en las siguientes secciones, se presenta el protocolo general (aunque detallado) a seguir en caso de identificar un riesgo previsto o nuevo en el Sprint Planning.
    
 ### 2.1. Metodología de análisis y respuesta ante riesgos (según su tipo)
 
@@ -137,7 +139,7 @@ Donde:
   
 Una vez que se tenga esta nformación de las 4 causas (filas en la tabla), de acuerdo al NPR, las filas del AMEF se ordenan: hasta arriba será la fila de la causa más importante del riesgo.
 
-3. Cuando se tengan las causas ordenadas de acuerdo al NPR en la Tabla AMEF, seguirá la toma de decisiones: por medio de una reunión o no, se realizarán **nuevas Tareas para el Sprint Backlog** que involucren las acciones preventivas a tomar **para la causa principal (primera fila del AMEF), y serán incluidas y priorizadas** dentro de dicho Sprint Backlog. A su vez deberá incluir, cada una de estas nuevas Tareas, el **tiempo y personal requerido**.
+3. Cuando se tengan las causas ordenadas de acuerdo al NPR en la Tabla AMEF, seguirá la toma de decisiones: por medio de una reunión o no, se decidirán **nuevas Tareas de mitigación para el Sprint Backlog** que involucren las acciones de mitigación a tomar **para la causa principal (primera fila del AMEF), y serán incluidas y priorizadas** dentro de dicho Sprint Backlog. A su vez deberá incluir, cada una de estas nuevas Tareas, el **tiempo y personal requerido**. Estas tareas, como se especificó, pueden o no implementar las respuestas de la Sección 1.4, dependiendo de lo que arroje el análisis como mejor opción.
 
 4. El NPV (Net Path Value), descrito en la sección siguiente con mayor detalle, se deberá calcular una vez que se establecieron las Tareas de mitigación del punto anterior. El NPV en el caso de riesgos cualitativos es la suma de las inversiones necesarias por cada tarea nueva. La inversión de cada tarea se calcula de la siguiente manera:
 
@@ -145,7 +147,7 @@ $$
 inv_i = \left[ \left( \hbox{días} \times \frac{\hbox{sueldo mensual}}{20^*} \right) \times \hbox{personas} \right] + \hbox{adquisiciones}
 $$
 
-para así:
+para así calcular el NPV:
 
 $$
 NPV = \sum^{N}{inv_{i}}
@@ -165,11 +167,11 @@ De esta manera, en NPV determinará los recursos monetarios que representa la mi
 
 ![Árbol de Decisión con Inversión por nodo.](res/arbol2.png)
 
-1. Se calcula el NPV (Net Path Value), que es costo de cada rama hasta su final, donde el costo es la suma de las multiplicaciones de Inversión por probabilidad. Así, se obtiene **la cantidad de dinero involucrado por rama de posibilidad del riesgo**, con el fin de facilitar la decisión al mostrar lo que compromete cada camino de decisión.
+3. Se calcula el NPV (Net Path Value), que es costo de cada rama hasta su final, donde el costo es la suma de las multiplicaciones de Inversión por probabilidad. Así, se obtiene **la cantidad de dinero involucrado por rama de posibilidad del riesgo**, con el fin de facilitar la decisión al mostrar lo que compromete cada camino de decisión.
 
 ![Árbol de Decisión con NPV](res/arbol3.png)
 
-4. Se decide cuál ramificación de decisiones se llevará a cabo por medio de una reunión.
+4. Se decide cuál ramificación de decisiones se llevará a cabo por medio de una reunión. Estas decisiones, como se especificó anteriormente, pueden o no implementar las respuestas de la Sección 1.4, dependiendo de lo que arroje el análisis como mejor opción.
 
 5. Una vez que se decide cuál ramificación de actividades realizar, cada nodo se convertirá en una Tarea para el Sprint Backlog del sprint que se busca iniciar. **Las probabilidades serán del 100%** para los nodos de la rama elegida, y **0% para cualquier otro nodo**. De esta manera, **el NPV de la rama elegida será la suma de las inversiones de cada nodo**:
 
