@@ -1,3 +1,10 @@
+---
+title: "Plan de Gestión de Riesgos"
+author: [Control y Ejecución Operacional de Proyectos]
+date: "2022"
+keywords: [Markdown, Example]
+...
+
 # Plan de Gestión de Riesgos
 
 ## Contenido
@@ -28,11 +35,9 @@
    
    3. Evaluación de efectividad de respuesta al riesgo
 
-https://es.slideshare.net/EmilianoGrande/plan-de-gestin-del-riesgo-77249033
-
 ## Introducción
 
-El siguiente documento constituye el Plan de Gestión de Riesgos para el proyecto, mismo que describe cómo se estructuran y se llevan a cabo actividades de gestión de riesgos. Este plan contiene la descripción de la forma en que se abordan los riesgos y las herramientas para llevarlo a cabo, además de las fuentes de información que se utilizarán para gestionar dichos riesgos. Adicionalmente, establece los roles y responsabilidades durante los distintos tipos de actividades requeridas, delimita cómo calcular el costo de un riesgo y provee una lista de los riesgos previstos, así como su clasificación.
+El siguiente documento constituye el Plan de Gestión de Riesgos para el proyecto, mismo que describe cómo se estructuran y se llevan a cabo actividades de gestión de riesgos, así como la identificación de los riesgos más probables dada la actual situación del mundo, país y tecnología. Este plan contiene, en primera instancia, una lista detallada de los riesgos identificados y sugerencias de respuesta, para continuar con la descripción de la forma en que se abordan estos riesgos y las herramientas para llevar a cabo su correspondiente mitigación, además de las fuentes de información que se utilizarán para gestionar dichas acciones de respuesta. Adicionalmente, establece los roles y responsabilidades durante los distintos tipos de actividades requeridas y delimita cómo calcular el costo de un riesgo, a fin de marcar una guía para la implementación de las acciones de respuesta y sus implicaciones de recursos en la línea base del proyecto.
 
 ## 1. Identificación de Riesgos
 
@@ -117,7 +122,7 @@ En cuanto al análisis de cada riesgo cualitativo previsto en la tabla de la Sec
    
 La etapa de análisis de un riesgo cualitativo comienza con un diagrama de causa y efecto (de pescado), a fin de identificar máximo **4 causas principales de tal riesgo (efecto)**, donde cada una de estas 4 causas tendrá **1 subcausa principal**. Dicho diagrama se comienza con el riesgo o amenaza, y se exploran las posibles causas que llevarían a que dicho riesgo ocurra. El diagrama seguirá el siguiente formato:
 
-![Diagrama de causa-efecto](res/diagramas-riesgos.png)
+![Diagrama de causa-efecto](res/diagramas-riesgos.png){width=8cm}
 
 2. Una vez que se tenga el diagrama, se tendrá claro cuáles serían las causas de que dicho riesgo se presente. Estas 4 causas presentes en el diagrama serán el input dentro de la siguiente herramienta de análisis: Tabla AMEF, a fin de ordenar por prioridad las 4 causas.
 
@@ -163,15 +168,15 @@ De esta manera, en NPV determinará los recursos monetarios que representa la mi
 
 1. La etapa de análisis de un riesgo cualitativo de prioridad comienza con la identificación de las posibles decisiones a tomar ante el riesgo. Estas posibles decisiones se acomodan en un Diagrama de Árbol. A continuación se presenta el diagrama de árbol para las posibles decisiones ante un despido en el área de IT:
 
-![Árbol de Decisión ante Riesgo #13.](res/arbol1.png)
+![Árbol de Decisión ante Riesgo #13.](res/arbol1.png){width=8cm}
 
 2. Se continúa trabajando sobre el mismo diagrama de árbol, donde ahora el siguiente paso es establecer las probabilidades de que las decisiones plasmadas ocurran, además de los costos por nodo invidual (Inversión). Los costos por nodo (Inversión) sólo establecen el costo neto de que se realice o suceda dicha decisión.
 
-![Árbol de Decisión con Inversión por nodo.](res/arbol2.png)
+![Árbol de Decisión con Inversión por nodo.](res/arbol2.png){width=8cm}
 
 3. Se calcula el NPV (Net Path Value), que es costo de cada rama hasta su final, donde el costo es la suma de las multiplicaciones de Inversión por probabilidad. Así, se obtiene **la cantidad de dinero involucrado por rama de posibilidad del riesgo**, con el fin de facilitar la decisión al mostrar lo que compromete cada camino de decisión.
 
-![Árbol de Decisión con NPV](res/arbol3.png)
+![Árbol de Decisión con NPV](res/arbol3.png){width=8cm}
 
 4. Se decide cuál ramificación de decisiones se llevará a cabo por medio de una reunión. Estas decisiones, como se especificó anteriormente, pueden o no implementar las respuestas de la Sección 1.4, dependiendo de lo que arroje el análisis como mejor opción.
 
@@ -183,7 +188,7 @@ $$
 
 De esta forma, el protocolo a seguir ante cualquier riesgo que sea parte de las Tareas en un Sprint y se prevee en el Sprint Planning, generará nuevas Tareas de respuesta/preventivas al riesgo de la siguiente manera:
 
-![Protocolos de análisis y respuesta a los dos tipos de riesgo](res/riesgos-overview.png)
+![Protocolos de análisis y respuesta a los dos tipos de riesgo](res/riesgos-overview.png){width=7cm}
    
 ### 2.2. Roles, responsabilidades y costos
 
@@ -263,7 +268,7 @@ Para el monitoreo de la información del Reporte de Riesgo se recomienda:
 
 - Realizar un diagrama de control con el historial de las Solicitudes de Cambio o SCCIs a lo largo del proyecto, donde se analizan el número de las Solicitudes de Cambio o SCCIs que se reportan como consecuencia del cambio implementado. Dicho diagrama de control tendrá **un límite de alerta**, ubicado a $2 \times \sigma$ del promedio de número de Solicitudes de Cambio $\overline{X}$ por semana. A continuación se presenta un ejemplo de gŕafico de control para analizar anomalías en la cantidad de cambios por consecuencia de Tareas de mitigación que fueron implementadas en las semanas marcadas en rojo. La línea de alerta, que se encuentra a $2\sigma$ del promedio de cambios, indica que las Tareas de mitigación implicaron una cantidad de cambios que deben ser supervisados de cerca. 
 
-   ![Gráfico de Control para Monitoreo](res/grafico-control.png)
+   ![Gráfico de Control para Monitoreo](res/grafico-control.png){width=6cm}
 
 - Una vez graficado el diagrama de control, de presentarse cantidades de Solicitudes de Cambios anormales (arriba del límite de alerta), se contactará al Departamento de Calidad para que se analice si dichas cantidades de cambios para la mitigación son normales o se está presentando **un nuevo riesgo** no previsto consecuente al riesgo mitigado, ya que cantidades anormales de cambios podrían ser consecuencia de un problema latente que se tiene y se está buscando controlar con cambios, pero que sólo esta desencadenando más y más ajustes, lo que debe tratarse de una amenaza nueva.
  
