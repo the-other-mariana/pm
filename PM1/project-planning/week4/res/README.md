@@ -1,6 +1,13 @@
+---
+title: "Plan de Gestión de Calidad"
+author: [Control y Ejecución Operacional de Proyectos]
+date: "2022"
+keywords: [Markdown, Example]
+...
+
 # Plan de Calidad
 
-## Índice
+## Contenido
 
 1. [**Política**](https://github.com/the-other-mariana/pm/tree/master/PM1/project-planning/week4/res#1-pol%C3%ADtica)
 
@@ -31,6 +38,12 @@
 6. [**Responsables**](https://github.com/the-other-mariana/pm/tree/master/PM1/project-planning/week4/res#6-responsables)
 
 7. [**Procedimientos: Situaciones fuera de control**](https://github.com/the-other-mariana/pm/tree/master/PM1/project-planning/week4/res#7-procedimientos-situaciones-fuera-de-control)
+
+## Introducción
+
+El siguiente documento presenta el Plan de Gestión de la Calidad para el presente proyecto. La calidad se tomará como el apego del producto resultante del proyecto al plan establecido. Por lo tanto, el presente Plan establece los objetivos y especificaciones de la operación del proyecto y su producto resultante.
+
+Así, el documento presenta en primer lugar una sección de Métricas, donde se divide en Funcionalidad Externa e Interna, donde la primera parte establece las referencias externas visuales que el usuario final espera como parte del producto, y cada una de éstas contiene los casos de prueba a los que se le someterá para lograr esos estándares, además de métricas externas que apliquen a la evaluación de dichos objetivos; la segunda parte establece métricas de referencia de funcionamiento interno del equipo y del producto final, así como aquellos valores deseados y no deseados de las mismas; y para finalizar, se delimita la periodicidad de evaluación de dichas métricas de ambas secciones. Se prosigue con las Herramientas de Calidad, donde se marca la pauta de cómo analizar las métricas de las secciones anteriores. Después, se establecen los métodos de medición que se utilizarán para registrar los valores de cada métrica a analizar. Se finaliza con una breve guía de acción para aquellas situaciones fuera de control que puedan surgir y que involucren la calidad del producto resultante.
 
 ## 1. Política
 
@@ -430,7 +443,7 @@ Después de obtener el MMI, se verifica su significado:
 
 - **Circular Dependency**: también llamada **cyclic dependecy**, es un antipatrón: indica las dependencias que tiene un archivo de código fuente con los demás archivos. Si un desarrollador quiere usar un archivo, todos aquellos archivos de los que depende también serán usados, por lo que se incrementa el desperdicio. Un grupo ciclado de archivos fuente se vería así:
 
-![img](arch/cycle.PNG)
+![img](arch/cycle.PNG){width=6cm}
 
 - **Número de elementos en el grupo ciclado más grande (MaxCG)**:
 
@@ -448,7 +461,7 @@ $$
 
 Por ejemplo, de tener un sistema con 6 componentes (archivos fuente / módulos), y calcular el ACD para la caja con el número 4, el resultado sería 6.
 
-![img](arch/ACD.PNG)
+![img](arch/ACD.PNG){width=5cm}
 
 - **Propagation Cost Metric (PC)**: 
 
@@ -517,7 +530,7 @@ Como se menciona en la seccion [sección 2.3 (Pruebas)](https://github.com/the-o
 
     Ejemplo
 
-    ![img](arch/mttf-plot.PNG)
+    ![img](arch/mttf-plot.PNG){width=7cm}
 
 - Gráficos de control
 
