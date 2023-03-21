@@ -42,4 +42,3 @@ q75, q25 = np.percentile(samples, [75 ,25])
 iqr = q75 - q25
 
 print("Interquartile range: ", iqr)
-
