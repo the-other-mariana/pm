@@ -1,0 +1,11 @@
+1. download installer (.exe)
+2. double click on installer
+3. select install launcher for all users
+4. select add python.exe to PATH (corner)
+5. Install now / [Customize Installation]
+6. check pip
+7. Next
+8. Install now
+9. Open powershell
+10. pip install numpy
+11. pip install matplotlib
