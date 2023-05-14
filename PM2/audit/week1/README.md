@@ -2,7 +2,7 @@
 
 ## Auditoría y dictaminación de proyectos
 
-- **auditoría**: revisión crítica y sistemática que realiza una persona(s) independiente del objetivo auditado, que puede ser una organización, sistema, proceso, proyecto o producto.
+- **auditoría**: revisión crítica y sistemática que realiza una persona(s) independiente del objeto auditado, que puede ser una organización, sistema, proceso, proyecto o producto.
 
 - **dictamen**: opinión o juicio que se forma y emite sobre algo.
 
@@ -110,7 +110,9 @@
 
     - inventario de documentación del proyecto: caso de negocio, formalización del proyecto, plan del proyecto: alcance, tiempo, costos, calidad, recursos humanos, comunicación, abastecimiento.
 
-proyecto de santiago, proyecto de jorge, carolina barreiro, fer gallo en lituania, ricardo y certificación codi
+
+
+
 
 
 
