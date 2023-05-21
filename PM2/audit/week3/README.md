@@ -96,6 +96,8 @@ No se trata de q los docs digan exactamente lo que dice tus req de auditoría. R
 
 - **Conclusiones de auditoría de proyecto**: consecuencia de una auditoría de proyecto que debe contener acciones sugeridas derivados de los hallazgos de las mismas.
 
+![img](diag.png)
+
 ## Ejercicio
 
 - Cada ciclo se dio del problema general a los particulares:
