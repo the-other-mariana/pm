@@ -1,6 +1,6 @@
 ## Fases de la auditoría
 
-1. **Planificación**: esta fase es para solicitar la auditoría y sea asignado como auditor por el auditado, es decir, te la solicitan. Se acuerdan las fechas y las partes que se auditarán. Se definen los ciclos de auditoría aquí y en preparación.
+1. **Planificación**: esta fase es para solicitar la auditoría y sea asignado como auditor por el auditado, es decir, te la solicitan. Se acuerdan las fechas y las partes que se auditarán. Se definen los ciclos de auditoría aquí y en preparación. Se define alcance, objeivos, Detalle de los departamentos, procesos o las empresas que serán auditadas, Personas que serán entrevistadas y sus agendamientos correspondientes.
 
 - Solicitud de auditoría
 
@@ -8,7 +8,7 @@
 
 - Asginación auditor
 
-2. **Preparación**
+2. **Preparación**:  auditor líder asigna funciones y prepara la lista de chequeo
 
 - Solicitud de requerimientos
 
@@ -16,7 +16,7 @@
 
 - Preparación de auditoría
 
-3. **Realización**:  la mayor cantidad de versiones del informe involucrará cada vez más al auditado. Puede corregirte y decirte que sí hizo ciertas cosas.
+3. **Realización**:  la mayor cantidad de versiones del informe involucrará cada vez más al auditado. Puede corregirte y decirte que sí hizo ciertas cosas. Se colecta toda la información, la evidencia, los testimonios y se realiza un informe con todos los hallazgos.
 
 - Realización de auditoría
 
@@ -26,7 +26,7 @@
 
 - Emisión informe definitivo
 
-4. **Seguimiento**: se vuelve a alimentar el ciclo de la auditoría. La auditoría es en ciclos, vuelve a empezar. Se vuelve a ejecutar el ciclo, iteración.
+4. **Seguimiento**: se vuelve a alimentar el ciclo de la auditoría. La auditoría es en ciclos, vuelve a empezar. Se vuelve a ejecutar el ciclo, iteración. los auditores revisan los problemas encontrados y plantean las recomendaciones a seguir. Un plan de seguimiento que tenga la posibilidad de verificar que se estén cumpliendo las recomendaciones (vuelve a empezar).
 
 - Comunicación de resultados al auditado
 
@@ -37,6 +37,12 @@
 - Envío de planes de acción a promotores
 
 Se pueden hacer auditorías por ciclos: un ciclo por stakeholder, ciclo de costos, un ciclo por paquete de trabajo (escaleras, pisos, etc)
+
+Fuentes
+
+- https://blog.softexpert.com/es/las-4-etapas-esenciales-en-auditorias-de-calidad/
+
+- https://blog.kawak.net/es-mx/mejorando_sistemas_de_gestion_iso/tipos-y-fases-de-una-auditoria
 
 ## Roles y Responsabilidades de auditoría
 
